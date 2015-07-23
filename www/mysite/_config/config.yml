@@ -1,0 +1,31 @@
+---
+Name: mysite
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+SSViewer:
+  theme: 'simple'
+Member:
+  lock_out_after_incorrect_logins: 3
+Director:
+  environment_type: 'live'
+GDBackend:
+  default_quality: 75
+---
+Only:
+  environment: 'dev'
+---
+SSViewer:
+  source_file_comments: true
+DataObjectAnnotator:
+    enabled:
+      true
+    enabled_modules:
+      - mysite
+      - Movie
+      - Series
+      - bolcom
