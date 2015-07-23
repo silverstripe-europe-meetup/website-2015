@@ -21,3 +21,8 @@ vendor/
 /silverstripe-colorpalette
 /silverstripe-cache
 /onepage
+/assets
+/display_logic
+/gallery
+/sortablefile
+/uploaddirrules

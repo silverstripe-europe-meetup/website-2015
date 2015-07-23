@@ -14,7 +14,8 @@
 		"silverstripe/userforms": "~2.0@dev",
 		"kinglozzer/multiselectfield": "dev-master",
 		"wernerkrauss/silverstripe-piwik": "dev-master",
-		"wernerkrauss/silverstripe-onepage": "dev-master"
+		"wernerkrauss/silverstripe-onepage": "dev-master",
+		"titledk/silverstripe-gallery": "dev-master"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable",

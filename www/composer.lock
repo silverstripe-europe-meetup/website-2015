@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ef61cbc38645d246027b7a5fd6fcc98c",
+    "hash": "c9fa5564f1a3799ba166cdc866b87e04",
     "packages": [
+        {
+            "name": "bummzack/sortablefile",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bummzack/sortablefile.git",
+                "reference": "7440e1491cd373855e67a3c30fce50d2fded895e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bummzack/sortablefile/zipball/7440e1491cd373855e67a3c30fce50d2fded895e",
+                "reference": "7440e1491cd373855e67a3c30fce50d2fded895e",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "bummzack"
+                }
+            ],
+            "description": "An extension for SilverStripe 3.1 that allows sorting of multiple attached images (extends UploadField).",
+            "keywords": [
+                "cms",
+                "silverstripe",
+                "sortable"
+            ],
+            "time": "2015-05-28 08:19:35"
+        },
         {
             "name": "colymba/gridfield-gallery-theme",
             "version": "dev-master",
@@ -479,6 +519,77 @@
                 "userforms"
             ],
             "time": "2015-07-20 14:56:48"
+        },
+        {
+            "name": "titledk/silverstripe-gallery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/titledk/silverstripe-gallery.git",
+                "reference": "46b3e664f7ea2b0896f1de7e2347bfbbe90bcfe0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/titledk/silverstripe-gallery/zipball/46b3e664f7ea2b0896f1de7e2347bfbbe90bcfe0",
+                "reference": "46b3e664f7ea2b0896f1de7e2347bfbbe90bcfe0",
+                "shasum": ""
+            },
+            "require": {
+                "bummzack/sortablefile": "*",
+                "titledk/silverstripe-uploaddirrules": "dev-legacy"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "gallery"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Anselm Christophersen",
+                    "email": "ac@anselm.dk"
+                }
+            ],
+            "description": "A simple gallery backend for SilverStripe 3 with advanced directory saving rules",
+            "homepage": "https://github.com/titledk/silverstripe-gallery",
+            "keywords": [
+                "gallery",
+                "silverstripe"
+            ],
+            "time": "2015-03-15 10:28:22"
+        },
+        {
+            "name": "titledk/silverstripe-uploaddirrules",
+            "version": "dev-legacy",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/titledk/silverstripe-uploaddirrules.git",
+                "reference": "b8bc73ac5efc7fa52b5d3470099ebf4703d5b285"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/titledk/silverstripe-uploaddirrules/zipball/b8bc73ac5efc7fa52b5d3470099ebf4703d5b285",
+                "reference": "b8bc73ac5efc7fa52b5d3470099ebf4703d5b285",
+                "shasum": ""
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "uploaddirrules"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Anselm Christophersen",
+                    "email": "ac@anselm.dk"
+                }
+            ],
+            "description": "Rules to keep the SilverStripe assets directory tidy",
+            "homepage": "https://github.com/titledk/silverstripe-uploaddirrules",
+            "keywords": [
+                "assets",
+                "silverstripe",
+                "subsites"
+            ],
+            "time": "2014-11-11 15:34:41"
         },
         {
             "name": "unclecheese/betterbuttons",
@@ -1128,6 +1239,7 @@
         "kinglozzer/multiselectfield": 20,
         "wernerkrauss/silverstripe-piwik": 20,
         "wernerkrauss/silverstripe-onepage": 20,
+        "titledk/silverstripe-gallery": 20,
         "phpunit/phpunit": 0,
         "axyr/silverstripe-ideannotator": 20
     },
