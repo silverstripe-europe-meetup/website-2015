@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c9093b993daa7a6afafdff668fd28bb0",
+    "hash": "ef61cbc38645d246027b7a5fd6fcc98c",
     "packages": [
         {
             "name": "colymba/gridfield-gallery-theme",
@@ -144,6 +144,38 @@
                 "zikula"
             ],
             "time": "2015-06-13 15:30:38"
+        },
+        {
+            "name": "heyday/silverstripe-colorpalette",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heyday/silverstripe-colorpalette.git",
+                "reference": "14a08abcc1dde7bb671873181e3c48f9c00f537a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heyday/silverstripe-colorpalette/zipball/14a08abcc1dde7bb671873181e3c48f9c00f537a",
+                "reference": "14a08abcc1dde7bb671873181e3c48f9c00f537a",
+                "shasum": ""
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cam Spiers",
+                    "email": "camspiers@gmail.com"
+                },
+                {
+                    "name": "Kyle Beattie",
+                    "email": "kyle@heyday.co.nz"
+                }
+            ],
+            "description": "A coor palette picker for SilverStripe CMS",
+            "time": "2013-07-28 06:19:51"
         },
         {
             "name": "kinglozzer/multiselectfield",
@@ -527,6 +559,94 @@
                 "silverstripe"
             ],
             "time": "2015-03-22 09:47:21"
+        },
+        {
+            "name": "wernerkrauss/silverstripe-onepage",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wernerkrauss/silverstripe-onepage.git",
+                "reference": "4be4f9ce51f6decad0cdf245d93c5329a689b80d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wernerkrauss/silverstripe-onepage/zipball/4be4f9ce51f6decad0cdf245d93c5329a689b80d",
+                "reference": "4be4f9ce51f6decad0cdf245d93c5329a689b80d",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "heyday/silverstripe-colorpalette": "dev-master",
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "suggest": {
+                "wernerkrauss/folderperpage": "create folders for each page"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "onepage"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Werner Krauß",
+                    "email": "werner.krauss@netwerkstatt.at",
+                    "homepage": "http://www.netwerkstatt.at",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An extension for simpe one-page sites",
+            "keywords": [
+                "extension",
+                "silverstripe"
+            ],
+            "time": "2014-09-30 16:03:11"
+        },
+        {
+            "name": "wernerkrauss/silverstripe-piwik",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wernerkrauss/silverstripe-piwik.git",
+                "reference": "2d1c5e037fdacd74098ca8257bd24d5525e7e1bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wernerkrauss/silverstripe-piwik/zipball/2d1c5e037fdacd74098ca8257bd24d5525e7e1bd",
+                "reference": "2d1c5e037fdacd74098ca8257bd24d5525e7e1bd",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "piwik"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Werner Krauß",
+                    "email": "werner.krauss@netwerkstatt.at",
+                    "homepage": "http://www.netwerkstatt.at",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds piwik tracking code to your site",
+            "keywords": [
+                "extension",
+                "silverstripe"
+            ],
+            "time": "2014-10-14 10:06:37"
         }
     ],
     "packages-dev": [
@@ -1006,6 +1126,8 @@
         "colymba/gridfield-gallery-theme": 20,
         "silverstripe/userforms": 20,
         "kinglozzer/multiselectfield": 20,
+        "wernerkrauss/silverstripe-piwik": 20,
+        "wernerkrauss/silverstripe-onepage": 20,
         "phpunit/phpunit": 0,
         "axyr/silverstripe-ideannotator": 20
     },

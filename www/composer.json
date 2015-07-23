@@ -12,7 +12,9 @@
 		"silverstripe/googlesitemaps": "dev-master",
 		"colymba/gridfield-gallery-theme": "dev-master",
 		"silverstripe/userforms": "~2.0@dev",
-		"kinglozzer/multiselectfield": "dev-master"
+		"kinglozzer/multiselectfield": "dev-master",
+		"wernerkrauss/silverstripe-piwik": "dev-master",
+		"wernerkrauss/silverstripe-onepage": "dev-master"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable",
