@@ -1,4 +1,16 @@
 <?php
+
+/**
+ * StartGeneratedWithDataObjectAnnotator
+ * @property string BackgroundColor
+ * @property string HeadingColor
+ * @property string TextColor
+ * @property string AdditionalCSSClass
+ * @property int BackgroundImageID
+ * @method Image BackgroundImage
+ * @mixin OnePageSlide
+ * EndGeneratedWithDataObjectAnnotator
+ */
 class Page extends SiteTree {
 
 	private static $db = array(

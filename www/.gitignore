@@ -1,5 +1,4 @@
 assets/*
-_ss_environment.php
 tools/phing-metadata
 silverstripe-cache
 .buildpath
@@ -17,3 +16,13 @@ vendor/
 /ideannotator
 /multiselectfield
 /userforms
+/piwik
+/silverstripe-colorpalette
+/silverstripe-cache
+/onepage
+/assets
+/display_logic
+/gallery
+/sortablefile
+/uploaddirrules
+/betternavigator

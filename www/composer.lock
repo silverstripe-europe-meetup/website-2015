@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c9093b993daa7a6afafdff668fd28bb0",
+    "hash": "22a56c52a07057dfec15dc0baa264b0c",
     "packages": [
+        {
+            "name": "bummzack/sortablefile",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bummzack/sortablefile.git",
+                "reference": "7440e1491cd373855e67a3c30fce50d2fded895e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bummzack/sortablefile/zipball/7440e1491cd373855e67a3c30fce50d2fded895e",
+                "reference": "7440e1491cd373855e67a3c30fce50d2fded895e",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "bummzack"
+                }
+            ],
+            "description": "An extension for SilverStripe 3.1 that allows sorting of multiple attached images (extends UploadField).",
+            "keywords": [
+                "cms",
+                "silverstripe",
+                "sortable"
+            ],
+            "time": "2015-05-28 08:19:35"
+        },
         {
             "name": "colymba/gridfield-gallery-theme",
             "version": "dev-master",
@@ -144,6 +184,78 @@
                 "zikula"
             ],
             "time": "2015-06-13 15:30:38"
+        },
+        {
+            "name": "heyday/silverstripe-colorpalette",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heyday/silverstripe-colorpalette.git",
+                "reference": "14a08abcc1dde7bb671873181e3c48f9c00f537a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heyday/silverstripe-colorpalette/zipball/14a08abcc1dde7bb671873181e3c48f9c00f537a",
+                "reference": "14a08abcc1dde7bb671873181e3c48f9c00f537a",
+                "shasum": ""
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cam Spiers",
+                    "email": "camspiers@gmail.com"
+                },
+                {
+                    "name": "Kyle Beattie",
+                    "email": "kyle@heyday.co.nz"
+                }
+            ],
+            "description": "A coor palette picker for SilverStripe CMS",
+            "time": "2013-07-28 06:19:51"
+        },
+        {
+            "name": "jonom/silverstripe-betternavigator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonom/silverstripe-betternavigator.git",
+                "reference": "d606d8c84117e88ea240a92e09a9bc5a78c56345"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonom/silverstripe-betternavigator/zipball/d606d8c84117e88ea240a92e09a9bc5a78c56345",
+                "reference": "d606d8c84117e88ea240a92e09a9bc5a78c56345",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "betternavigator"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathon Menz",
+                    "homepage": "http://jonathonmenz.com"
+                }
+            ],
+            "description": "Front-end utility menu for SilverStripe websites featuring administration and development tools",
+            "keywords": [
+                "BetterNavigator",
+                "SilverStripeNavigator",
+                "navigator",
+                "silverstripe"
+            ],
+            "time": "2015-03-03 17:11:07"
         },
         {
             "name": "kinglozzer/multiselectfield",
@@ -449,6 +561,77 @@
             "time": "2015-07-20 14:56:48"
         },
         {
+            "name": "titledk/silverstripe-gallery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/titledk/silverstripe-gallery.git",
+                "reference": "46b3e664f7ea2b0896f1de7e2347bfbbe90bcfe0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/titledk/silverstripe-gallery/zipball/46b3e664f7ea2b0896f1de7e2347bfbbe90bcfe0",
+                "reference": "46b3e664f7ea2b0896f1de7e2347bfbbe90bcfe0",
+                "shasum": ""
+            },
+            "require": {
+                "bummzack/sortablefile": "*",
+                "titledk/silverstripe-uploaddirrules": "dev-legacy"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "gallery"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Anselm Christophersen",
+                    "email": "ac@anselm.dk"
+                }
+            ],
+            "description": "A simple gallery backend for SilverStripe 3 with advanced directory saving rules",
+            "homepage": "https://github.com/titledk/silverstripe-gallery",
+            "keywords": [
+                "gallery",
+                "silverstripe"
+            ],
+            "time": "2015-03-15 10:28:22"
+        },
+        {
+            "name": "titledk/silverstripe-uploaddirrules",
+            "version": "dev-legacy",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/titledk/silverstripe-uploaddirrules.git",
+                "reference": "b8bc73ac5efc7fa52b5d3470099ebf4703d5b285"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/titledk/silverstripe-uploaddirrules/zipball/b8bc73ac5efc7fa52b5d3470099ebf4703d5b285",
+                "reference": "b8bc73ac5efc7fa52b5d3470099ebf4703d5b285",
+                "shasum": ""
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "uploaddirrules"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Anselm Christophersen",
+                    "email": "ac@anselm.dk"
+                }
+            ],
+            "description": "Rules to keep the SilverStripe assets directory tidy",
+            "homepage": "https://github.com/titledk/silverstripe-uploaddirrules",
+            "keywords": [
+                "assets",
+                "silverstripe",
+                "subsites"
+            ],
+            "time": "2014-11-11 15:34:41"
+        },
+        {
             "name": "unclecheese/betterbuttons",
             "version": "dev-master",
             "source": {
@@ -527,6 +710,94 @@
                 "silverstripe"
             ],
             "time": "2015-03-22 09:47:21"
+        },
+        {
+            "name": "wernerkrauss/silverstripe-onepage",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wernerkrauss/silverstripe-onepage.git",
+                "reference": "4be4f9ce51f6decad0cdf245d93c5329a689b80d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wernerkrauss/silverstripe-onepage/zipball/4be4f9ce51f6decad0cdf245d93c5329a689b80d",
+                "reference": "4be4f9ce51f6decad0cdf245d93c5329a689b80d",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "heyday/silverstripe-colorpalette": "dev-master",
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "suggest": {
+                "wernerkrauss/folderperpage": "create folders for each page"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "onepage"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Werner Krauß",
+                    "email": "werner.krauss@netwerkstatt.at",
+                    "homepage": "http://www.netwerkstatt.at",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An extension for simpe one-page sites",
+            "keywords": [
+                "extension",
+                "silverstripe"
+            ],
+            "time": "2014-09-30 16:03:11"
+        },
+        {
+            "name": "wernerkrauss/silverstripe-piwik",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wernerkrauss/silverstripe-piwik.git",
+                "reference": "2d1c5e037fdacd74098ca8257bd24d5525e7e1bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wernerkrauss/silverstripe-piwik/zipball/2d1c5e037fdacd74098ca8257bd24d5525e7e1bd",
+                "reference": "2d1c5e037fdacd74098ca8257bd24d5525e7e1bd",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*",
+                "silverstripe/cms": "3.*",
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "piwik"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Werner Krauß",
+                    "email": "werner.krauss@netwerkstatt.at",
+                    "homepage": "http://www.netwerkstatt.at",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Adds piwik tracking code to your site",
+            "keywords": [
+                "extension",
+                "silverstripe"
+            ],
+            "time": "2014-10-14 10:06:37"
         }
     ],
     "packages-dev": [
@@ -1006,6 +1277,10 @@
         "colymba/gridfield-gallery-theme": 20,
         "silverstripe/userforms": 20,
         "kinglozzer/multiselectfield": 20,
+        "wernerkrauss/silverstripe-piwik": 20,
+        "wernerkrauss/silverstripe-onepage": 20,
+        "titledk/silverstripe-gallery": 20,
+        "jonom/silverstripe-betternavigator": 20,
         "phpunit/phpunit": 0,
         "axyr/silverstripe-ideannotator": 20
     },
