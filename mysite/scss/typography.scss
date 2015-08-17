@@ -1,0 +1,200 @@
+@import "config";
+
+.typography, body {
+	@include rem((font-size: $font-size));
+
+	// * PARAGRAPHS
+	// -------------------------------------------- */
+	p {
+		//line-height: 18px;
+		line-height: 1.4;
+		@include rem((margin: 0 0 18px));
+	}
+
+	// * QUOTES
+	// -------------------------------------------- */
+	blockquote {
+		margin: 10px;
+		font-size: 1.4em;
+		color: #777;
+		font-style: italic;
+	}
+	q {
+		display: block;
+		font-size: 0.8em;
+		margin: 1em 1em;
+		padding: 0.5em;
+		border: 1px #ccc solid;
+	}
+
+	// * LINKS
+	// -------------------------------------------- */
+	a {
+		text-decoration: none;
+		color: $link-color;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	// * LIST STYLES
+	// -------------------------------------------- */
+	ul,
+	ol {
+		@include rem((margin: 0 0 18px 24px));
+
+		li {
+			@include rem((margin: 5px 10px));
+		}
+		li li {
+			//font-size: 10px;
+			@include rem((font-size: ($font-size - 2)));
+		}
+	}
+
+	// * HEADER STYLES
+	// -------------------------------------------- */
+	h1, h2, h3, h4, h5, h6 {
+		@include rem((margin: 0 0 18px));
+		font-weight: 400;
+		font-family: $font-family-headlines;
+		line-height: 1;
+	}
+	h4 {
+		@include rem((margin: 0 0 16px));
+	}
+	h5, h6 {
+		@include rem((margin: 0 0 12px));
+	}
+	$headlines: (28px, 24px, 20px, 18px, 17px, 16px);
+	@for $i from 1 through length($headlines) {
+		h#{$i} {
+			@include rem((font-size: nth($headlines, $i)));
+		}
+	}
+	@include breakpoint-with-fallback($breakpoint-medium) {
+		$headlines: (36px, 28px, 24px, 22px, 20px, 18px);
+		@for $i from 1 through length($headlines) {
+			h#{$i} {
+				@include rem((font-size: nth($headlines, $i)));
+			}
+		}
+	}
+	@include breakpoint-with-fallback(800px) {
+		$headlines: (42px, 36px, 26px, 23px, 21px, 18px);
+		@for $i from 1 through length($headlines) {
+			h#{$i} {
+				@include rem((font-size: nth($headlines, $i)));
+			}
+		}
+	}
+
+	// * PRE STYLES
+	// -------------------------------------------- */
+	pre {
+		font-family: "Courier New", Courier, $font-family;
+		display: block;
+		font-size: 1.2em;
+		margin: 2em 5em;
+		padding: 0.5em;
+		border: 1px #ccc solid;
+		background: #eee;
+	}
+
+	// * TABLE STYLING
+	// -------------------------------------------- */
+	table {
+		@include rem((margin: 0 0 18px));
+		border-collapse: collapse;
+
+		td {
+			border: 1px #999 solid;
+			@include rem((padding: 5px));
+		}
+	}
+
+	// * WYSIWYG EDITOR ALIGNMENT CLASSES
+	// -------------------------------------------- */
+	.left {
+		text-align: left;
+	}
+	.center {
+		text-align: center;
+	}
+	.right {
+		text-align: right;
+	}
+
+	// * IMAGES
+	// -------------------------------------------- */
+	img {
+		border: none;
+		max-width: 100%;
+
+		&.right {
+			float: right;
+			@include rem((margin-left: 18px));
+		}
+		&.left {
+			float: left;
+			@include rem((margin-right: 18px));
+		}
+		&.leftAlone {
+			float: left;
+			margin-right: 100%;
+		}
+		&.rightAlone {
+			float: right;
+			margin-left: 100%;
+		}
+		&.center {
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+	}
+	%cms-button {
+		display: inline-block;
+		padding: 10px 20px;
+		border: 1px solid;
+		font-size: 18px;
+		margin: 10px 5px;
+		@include border-radius(45px);
+		@include transition(all 300ms ease);
+
+		&, * {
+			text-decoration: none !important;
+		}
+	}
+	@each $key, $val in $colors {
+		.color-#{$key}, .button-#{$key} {
+			&, * {
+				color: $val;
+			}
+		}
+		.button-#{$key} {
+			@extend %cms-button;
+
+			&:hover {
+				&, * {
+					color: darken($val, 10%);
+				}
+			}
+		}
+		.button-#{$key}-full {
+			@extend %cms-button;
+			background: $val !important;
+			border-color: $val !important;
+
+			&, * {
+				color: map-get($colors-contrast, $key);
+			}
+			&:hover {
+				background: darken($val, 10%) !important;
+				border-color: darken($val, 10%) !important;
+			}
+		}
+	}
+}

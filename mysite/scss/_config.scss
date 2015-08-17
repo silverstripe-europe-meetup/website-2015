@@ -1,0 +1,89 @@
+// this file should be included into all other files, here you can add variables and mixins
+
+$module: "mysite";
+
+@import "../thirdparty/composer-bower/compass-mixins/lib/compass";
+@import "includes/mixins";
+@import "includes/rem";
+@import "includes/compass-polyfill";
+@import "../thirdparty/composer-bower/sassy-maps/sass/sassy-maps";
+@import "../thirdparty/composer-bower/compass-breakpoint/stylesheets/breakpoint";
+@import "../thirdparty/composer-bower/susy/sass/susy";
+
+$color-blue-light: #26B7E6;
+$color-blue: #015790;
+$color-blue-dark: #142136;
+$color-green: #00A881;
+$color-pink: #E20C54;
+//$color-grey-light: #F6F6F6;
+$color-grey-light: #E0E0E0;
+$color-grey-dark: #232730;
+
+$colors: (
+		blue-light: $color-blue-light,
+		blue: $color-blue,
+		blue-dark: $color-blue-dark,
+		green: $color-green,
+		pink: $color-pink,
+		grey-light: $color-grey-light,
+		grey-dark: $color-grey-dark,
+		white: #FFF,
+);
+$colors-contrast: (
+		blue-light: #FFF,
+		blue: #FFF,
+		blue-dark: #FFF,
+		green: #FFF,
+		pink: #FFF,
+		grey-light: $color-grey-dark,
+		grey-dark: $color-grey-light,
+		white: #FFF,
+);
+
+$text-color: #353535;
+$link-color: $color-pink;
+$font-family: 'Source Sans Pro', sans-serif;
+$font-family-headlines: $font-family;
+$font-size: 16px;
+$rem-base: 16px;
+
+$rem-enabled: true;
+$ie-8-support: false;
+
+$breakpoint-small: 400px;
+$breakpoint-medium: 600px;
+
+$section-gutter: 60px;
+$container-width: 870px;
+
+@include breakpoint-set('no query fallbacks', true);
+
+$breakpoint-fallback-class: '.no-mediaqueries';
+
+@mixin breakpoint-with-fallback($breakpoint) {
+	@include breakpoint($breakpoint, $breakpoint-fallback-class) {
+		@content;
+	}
+}
+
+$total-columns: 12;
+
+$susy: (
+		math: fluid,
+		output: float,
+		gutter-position: after,
+		container: $container-width,
+		container-position: center,
+		columns: $total-columns,
+		gutters: 1,
+		column-width: false,
+		global-box-sizing: border-box,
+		last-flow: to,
+		use-custom: (
+				background-image: true,
+				background-options: false,
+				box-sizing: true,
+				clearfix: false,
+				rem: true,
+		),
+);
