@@ -19,7 +19,6 @@
 			</div>
             <% include Footer %>
 		</div>
-        <!-- Piwik -->
         <script type="text/javascript">
             var _paq = _paq || [];
             _paq.push(['trackPageView']);
@@ -27,12 +26,11 @@
             (function() {
                 var u="//piwik.silverstripe-europe.org/";
                 _paq.push(['setTrackerUrl', u+'piwik.php']);
-                _paq.push(['setSiteId', 5]);
+                _paq.push(['setSiteId', 4]);
                 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
                 g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
             })();
         </script>
-        <noscript><p><img src="//piwik.filmsvandaag.nl/piwik.php?idsite=5" style="border:0;" alt="" /></p></noscript>
-        <!-- End Piwik Code -->
+        <noscript><p><img src="//piwik.silverstripe-europe.org/piwik.php?idsite=4" style="border:0;" alt="" /></p></noscript>
 	</body>
 </html>
