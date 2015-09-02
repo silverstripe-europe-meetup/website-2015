@@ -18,3 +18,4 @@ if (Director::isLive()) {
 	Director::forceWWW();
 	SS_Log::add_writer(new SS_LogEmailWriter('info@silverstripe-europe.org'), SS_Log::ERR);
 }
+Config::inst()->update('HtmlEditorField', 'use_gzip', false);
