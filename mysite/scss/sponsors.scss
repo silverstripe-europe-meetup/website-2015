@@ -5,17 +5,18 @@
 		max-width: 100%;
 	}
 	&.platinum, &.gold {
+		@include span(12);
 		.logo-left {
-			@include span(3);
+			@include span(3 of 12);
 		}
 		.logo-right {
-			@include span(3 last);
+			@include span(3 of 12 last);
 		}
 		.content-left {
-			@include span(9);
+			@include span(9 of 12);
 		}
 		.content-right {
-			@include span(9 last);
+			@include span(9 of 12 last);
 		}
 	}
 	&.silver, &.bronze {
