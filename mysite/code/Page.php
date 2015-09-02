@@ -59,6 +59,7 @@ class Page_Controller extends \ContentController {
 			project() . '/scss/header.scss',
 			project() . '/scss/footer.scss',
 			project() . '/scss/layout.scss',
+			project() . '/scss/sponsors.scss',
 			project() . '/scss/legacy.scss',
 		]);
 		\Requirements::css(project() . '/scss/print.scss', 'print');
@@ -66,4 +67,5 @@ class Page_Controller extends \ContentController {
 		\Requirements::clear(project() . '/css/editor.css');
 		\Requirements::css('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
 	}
+
 }

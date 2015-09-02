@@ -29,3 +29,14 @@ LeftAndMain:
     - 'mysiteLeftAndMainExtension'
 #  extra_requirements_css:
 #    - 'mysite/css/cms.css'
+---
+Only:
+  environment: 'dev'
+---
+SSViewer:
+  source_file_comments: true
+DataObjectAnnotator:
+    enabled:
+      true
+    enabled_modules:
+      - mysite

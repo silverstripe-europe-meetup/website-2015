@@ -1,0 +1,39 @@
+@import "config";
+.sponsor-item  {
+	margin-bottom: gutter();
+	img {
+		max-width: 100%;
+	}
+	&.platinum, &.gold {
+		.logo-left {
+			@include span(3);
+		}
+		.logo-right {
+			@include span(3 last);
+		}
+		.content-left {
+			@include span(9);
+		}
+		.content-right {
+			@include span(9 last);
+		}
+	}
+	&.silver, &.bronze {
+		@include span(6);
+		&.even {
+			@include span(last);
+		}
+		.logo-left {
+			@include span(2 of 6);
+		}
+		.content-left {
+			@include span(4 of 6);
+		}
+		.content-right {
+			@include span(4 of 6 last);
+		}
+		.logo-right {
+			@include span(2 of 6 last);
+		}
+	}
+}
