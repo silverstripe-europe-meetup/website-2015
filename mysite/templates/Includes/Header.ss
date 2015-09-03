@@ -5,7 +5,7 @@
 			<h1>$SiteConfig.Title</h1>
 		</a>
 		<button class="toggle-nav"><span></span></button>
-		<ul>
+		<ul class="navigation">
             <% if $LayoutSectionsMenu %>
                 <% loop $LayoutSectionsMenu %>
 					<li>

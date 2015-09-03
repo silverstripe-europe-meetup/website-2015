@@ -59,7 +59,7 @@ header {
 		}
 
 	}
-	ul {
+	ul.navigation {
 		display: none;
 		clear: both;
 		padding: 10px 0 0;
@@ -98,7 +98,7 @@ header {
 		.toggle-nav {
 			display: none;
 		}
-		ul {
+		ul.navigation {
 			display: block !important;
 			text-align: right;
 			margin: 0 0 0 190px;
