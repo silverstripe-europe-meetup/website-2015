@@ -29,6 +29,7 @@ class Page_Controller extends \ContentController {
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery/dist/jquery.min.js',
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery.entwine/dist/jquery.entwine-dist.js',
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/jquery.magnific-popup.min.js',
+			project() . '/javascript/parallax.min.js',
 			project() . '/javascript/plugins.js',
 			project() . '/javascript/timer.js',
 			project() . '/javascript/main.js',

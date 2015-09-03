@@ -1,4 +1,4 @@
-<div class="background" <% if $BackgroundImage %>style="background-image: url('$BackgroundImage.URL');"<% end_if %>>
+<div class="background" <% if $BackgroundImage %>data-parallax="scroll" data-image-src="$BackgroundImage.URL" data-speed="0.2"<% end_if %>>
 	<div class="background-overlay background-$BackgroundColor"></div>
 	<div class="section-inner-container">
 		<div class="section-inner section-size-$Size">
