@@ -11,12 +11,14 @@
 		}
 		.logo-right {
 			@include span(3 of 12 last);
+			margin-bottom: gutter();
 		}
 		.content-left {
 			@include span(9 of 12);
 		}
 		.content-right {
 			@include span(9 of 12 last);
+			margin-bottom: gutter();
 		}
 	}
 	&.silver, &.bronze {
@@ -32,9 +34,11 @@
 		}
 		.content-right {
 			@include span(4 of 6 last);
+			margin-bottom: gutter();
 		}
 		.logo-right {
 			@include span(2 of 6 last);
+			margin-bottom: gutter();
 		}
 	}
 }
