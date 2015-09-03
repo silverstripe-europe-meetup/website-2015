@@ -15,7 +15,6 @@ define('PROJECT_THIRDPARTY_PATH', BASE_PATH . '/' . PROJECT_THIRDPARTY_DIR);
 if (Director::isLive()) {
 	// we are in live mode, send errors per email, set cache and force WWW
 	HTTP::set_cache_age(3600);
-	SS_Cache::set_cache_lifetime('any', 60*60*3);
 	Director::forceWWW();
 	SS_Log::add_writer(new SS_LogEmailWriter('info@silverstripe-europe.org'), SS_Log::ERR);
 }
