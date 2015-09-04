@@ -1,18 +1,33 @@
 @import "config";
 
 form {
+	@include span(12);
+	margin-bottom: gutter();
+
 	fieldset {
 		border: 0;
+	}
+	.field {
+		@include span(6 of 12);
+		&.email, &.dropdown {
+			@include span(6 of 12 last);
+		}
+		&.textarea {
+			@include span(12);
+		}
+	}
+	input, textarea, select {
+		@include span(12);
+		&.action {
+			@include span(4);
+			margin: 0 0 25px 15px;
+		}
 	}
 	input.action, input.text, textarea, select {
 		font-family: $font-family;
 		font-size: $font-size;
 		color: $text-color;
 		padding: 2px;
-
-		/* INPUT BOXS
-		---------------------------------------- */
-		// TODO default styles
 
 		/* ACTION BUTTONS
 		---------------------------------------- */
@@ -30,7 +45,7 @@ form {
 		list-style: none;
 	}
 	.middleColumn {
-		display: block;
+		//display: block;
 		margin: 0 10px 10px 0;
 
 		.middleColumn {
@@ -44,7 +59,7 @@ form {
 	/* SELECT DROPDOWN
 	---------------------------------------- */
 	select {
-		width: auto;
+		//width: auto;
 	}
 
 	/* LABELS
