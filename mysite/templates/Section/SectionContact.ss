@@ -6,8 +6,8 @@
 				<h2 class="section-title">$Title</h2>
 				$Content
                 <div class="clear"></div>
-				<% if $flashMessage %>
-					<p>Thank you for your submission, we will be in touch shortly.</p>
+				<% if $ContactForm.flashMessage %>
+					<p class="thankyou-message">Thank you for your submission, we will be in touch shortly.</p>
 				<% end_if %>
 				$ContactForm
 			</div>

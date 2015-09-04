@@ -29,7 +29,6 @@ class Page_Controller extends \ContentController
 
 	public function init()
 	{
-		$this->flashMessage = Session::get('ThanksMessage');
 		Requirements::set_backend(new BetterRequirements_Backend());
 		parent::init();
 		Requirements::javascript('https://maps.googleapis.com/maps/api/js');
@@ -68,7 +67,8 @@ class Page_Controller extends \ContentController
 	}
 
 
-	public function ContactForm(){
+	public function ContactForm()
+	{
 		$FieldList = FieldList::create(
 			array(
 				$name = TextField::create('Name', 'Your name'),
@@ -93,6 +93,7 @@ class Page_Controller extends \ContentController
 			)
 		);
 		$Form = Form::create($this, 'ContactForm', $FieldList, $Action, $Required);
+		$Form->flashMessage = Session::get('ThanksMessage');
 
 		return $Form;
 	}
@@ -109,7 +110,7 @@ class Page_Controller extends \ContentController
 		$Contact = Contact::create();
 		$form->saveInto($Contact);
 		$Contact->write();
-		Session::set('ThanksMessage', 'Thanks for your submission, we will be in touch soon.');
+		Session::set('ThanksMessage', true);
 		$this->redirect($this->Link() . '#section-contact');
 	}
 }

@@ -11,7 +11,7 @@
 
 /**
  * StartGeneratedWithDataObjectAnnotator
- * @method DataList|Contact[] Contacts
+ * @property string BackgroundColor
  * EndGeneratedWithDataObjectAnnotator
  */
 class SectionContact extends SectionBase
