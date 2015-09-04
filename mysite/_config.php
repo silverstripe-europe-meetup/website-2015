@@ -9,7 +9,6 @@ require_once('conf/ConfigureFromEnv.php');
 // set default language
 i18n::set_locale('en_US');
 
-// Force redirect to www
 define('PROJECT_THIRDPARTY_DIR', project() . '/thirdparty');
 define('PROJECT_THIRDPARTY_PATH', BASE_PATH . '/' . PROJECT_THIRDPARTY_DIR);
 if (Director::isLive()) {
