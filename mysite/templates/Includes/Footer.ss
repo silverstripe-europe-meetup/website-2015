@@ -1,3 +1,4 @@
+<% cached %>
 <footer>
 	<div class="container footer-top">
 		<div class="left-column">
@@ -18,3 +19,4 @@
 		</div>
 	</div>
 </footer>
+<% end_cached %>
