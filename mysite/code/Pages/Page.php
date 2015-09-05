@@ -113,4 +113,9 @@ class Page_Controller extends \ContentController
 		Session::set('ThanksMessage', true);
 		$this->redirect($this->Link() . '#section-contact');
 	}
+
+	public function isLive()
+	{
+		return Director::isLive();
+	}
 }
