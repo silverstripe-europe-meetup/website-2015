@@ -1,3 +1,4 @@
+<% cached %>
 <div class="header-push"></div>
 <header>
 	<nav class="container">
@@ -22,3 +23,4 @@
 		</ul>
 	</nav>
 </header>
+<% end_cached %>
