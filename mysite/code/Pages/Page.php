@@ -60,7 +60,7 @@ class Page_Controller extends \ContentController
 			project() . '/scss/sponsors.scss',
 			project() . '/scss/legacy.scss',
 		]);
-		Requirements::css(project() . '/scss/print.scss', 'print');
+//		Requirements::css(project() . '/scss/print.scss', 'print'); We are far from interested in paperworks.
 		Requirements::css(project() . '/scss/editor.scss');
 		Requirements::clear(project() . '/css/editor.css');
 		Requirements::css('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
