@@ -1,4 +1,4 @@
-<% cached %>
+<% cached $URLSegment %>
     <div class="background" <% if $BackgroundImage %>data-parallax="scroll" data-image-src=".$BackgroundImage.URL"
          data-speed="0.2" data-bleed="0" <% end_if %>>
         <div class="background-overlay background-$BackgroundColor"></div>

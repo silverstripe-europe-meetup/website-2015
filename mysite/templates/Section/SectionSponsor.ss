@@ -1,4 +1,4 @@
-<% cached %>
+<% cached $URLSegment %>
     <div class="background background-$BackgroundColor">
         <div class="section-inner-container">
             <div class="section-inner">
