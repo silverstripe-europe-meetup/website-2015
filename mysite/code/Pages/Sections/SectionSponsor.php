@@ -10,6 +10,7 @@
 /**
  * StartGeneratedWithDataObjectAnnotator
  * @property string BackgroundColor
+ * @property string AfterContent
  * EndGeneratedWithDataObjectAnnotator
  */
 class SectionSponsor extends SectionBase
@@ -17,6 +18,7 @@ class SectionSponsor extends SectionBase
 	private
 	static $db = [
 		'BackgroundColor' => 'Varchar',
+		'AfterContent' => 'HTMLText',
 	];
 	private
 	static $defaults = [
@@ -34,6 +36,7 @@ class SectionSponsor extends SectionBase
 				'blue-dark'  => '#015790',
 			]),
 		], 'Content');
+		$return->addFieldToTab('Root.Main', HtmlEditorField::create('AfterContent', 'Text to appear after the sponsors'));
 		return $return;
 	}
 

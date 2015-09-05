@@ -60,7 +60,9 @@
 				<% end_loop %>
 				<% end_if %>
                 <div class="clear"></div>
-            </div>
+				$AfterContent
+				<div class="clear"></div>
+			</div>
         </div>
     </div>
 </div>
