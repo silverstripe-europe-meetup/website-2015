@@ -33,37 +33,15 @@ class Page_Controller extends \ContentController
 		parent::init();
 		Requirements::javascript('https://maps.googleapis.com/maps/api/js');
 		Requirements::set_combined_files_folder(project() . '/_combinedfiles');
-		Requirements::combine_files('main.js', [
-			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery/dist/jquery.min.js',
-			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery.entwine/dist/jquery.entwine-dist.js',
-			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/jquery.magnific-popup.min.js',
-			project() . '/javascript/parallax.min.js',
-			project() . '/javascript/plugins.js',
-			project() . '/javascript/timer.js',
-			project() . '/javascript/main.js',
-		]);
+		$this->requireJS();
 		// insert modernizr into <head> for html5shiv to work
 		Requirements::insertHeadTags(sprintf(
 			'<script src="%s"></script>',
 			PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr.min.js'
 		));
-
-		Requirements::combine_files('main.css', [
-			PROJECT_THIRDPARTY_DIR . '/composer-bower/normalize-css/normalize.css',
-			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/magnific-popup.css',
-			project() . '/scss/screen.scss',
-			project() . '/scss/typography.scss',
-			project() . '/scss/form.scss',
-			project() . '/scss/header.scss',
-			project() . '/scss/footer.scss',
-			project() . '/scss/layout.scss',
-			project() . '/scss/sponsors.scss',
-			project() . '/scss/legacy.scss',
-		]);
-//		Requirements::css(project() . '/scss/print.scss', 'print'); We are far from interested in paperworks.
-		Requirements::css(project() . '/scss/editor.scss');
 		Requirements::clear(project() . '/css/editor.css');
 		Requirements::css('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+		$this->requireCSS();
 	}
 
 
@@ -117,5 +95,44 @@ class Page_Controller extends \ContentController
 	public function isLive()
 	{
 		return Director::isLive();
+	}
+
+	public function requireJS()
+	{
+		Requirements::combine_files('main.js', [
+			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery/dist/jquery.min.js',
+			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery.entwine/dist/jquery.entwine-dist.js',
+			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/jquery.magnific-popup.min.js',
+			project() . '/javascript/parallax.min.js',
+			project() . '/javascript/plugins.js',
+			project() . '/javascript/timer.js',
+			project() . '/javascript/main.js',
+		]);
+	}
+
+	public function requireCSS()
+	{
+		Requirements::combine_files('main.css', [
+			PROJECT_THIRDPARTY_DIR . '/composer-bower/normalize-css/normalize.css',
+			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/magnific-popup.css',
+			project() . '/scss/screen.scss',
+			project() . '/scss/typography.scss',
+			project() . '/scss/form.scss',
+			project() . '/scss/header.scss',
+			project() . '/scss/footer.scss',
+			project() . '/scss/layout.scss',
+			project() . '/scss/sponsors.scss',
+			project() . '/scss/legacy.scss',
+		]);
+//		Requirements::css(project() . '/scss/print.scss', 'print'); We are far from interested in paperworks.
+		Requirements::css(project() . '/scss/editor.scss');
+		Requirements::clear(project() . '/css/editor.css');
+		Requirements::css('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
+	}
+
+	public function onAfterWrite(){
+		parent::onAfterWrite();
+
+
 	}
 }

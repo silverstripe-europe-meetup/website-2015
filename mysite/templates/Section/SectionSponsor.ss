@@ -24,12 +24,12 @@
                         <h3 class="center sponsor-type">Gold</h3>
 						<% loop $Sponsors('Gold') %>
                             <div class="center $EvenOdd sponsor-item gold">
-                                <a href="$URL" class="logo-<% if $Odd %>left<% else %>right<% end_if %>" Title="$Title"
+                                <a href="$URL" class="logo-<% if $PosGold %>right<% else %>left<% end_if %>" Title="$Title"
                                    target="_blank">
                                     <img src="$Logo.SetSize(125,125).URL" alt="$Title"/>
                                 </a>
 
-                                <div class="content-<% if $Odd %>right<% else %>left<% end_if %>">$Content.ContextSummary(400)</div>
+                                <div class="content-<% if $PosGold %>left<% else %>right<% end_if %>">$Content.ContextSummary(400)</div>
                             </div>
                             <div class="clear"></div>
 						<% end_loop %>
