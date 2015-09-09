@@ -33,14 +33,9 @@ class Page_Controller extends \ContentController
 		parent::init();
 		Requirements::javascript('https://maps.googleapis.com/maps/api/js');
 		Requirements::set_combined_files_folder(project() . '/_combinedfiles');
+		Requirements::set_force_js_to_bottom(true);
 		$this->requireJS();
-		// insert modernizr into <head> for html5shiv to work
-		Requirements::insertHeadTags(sprintf(
-			'<script src="%s"></script>',
-			PROJECT_THIRDPARTY_DIR . '/modernizr/modernizr.min.js'
-		));
 		Requirements::clear(project() . '/css/editor.css');
-		Requirements::css('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
 		$this->requireCSS();
 	}
 
@@ -124,7 +119,6 @@ class Page_Controller extends \ContentController
 			project() . '/scss/sponsors.scss',
 			project() . '/scss/legacy.scss',
 		]);
-//		Requirements::css(project() . '/scss/print.scss', 'print'); We are far from interested in paperworks.
 		Requirements::css(project() . '/scss/editor.scss');
 		Requirements::clear(project() . '/css/editor.css');
 		Requirements::css('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
