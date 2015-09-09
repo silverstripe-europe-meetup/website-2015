@@ -40,7 +40,7 @@ class SectionSponsor extends SectionBase
 		return $return;
 	}
 
-	public function Sponsors($type)
+	public function Sponsors($type = '')
 	{
 		return Sponsor::get()->filter(array('Type' => $type));
 	}
