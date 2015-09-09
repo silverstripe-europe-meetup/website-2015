@@ -31,9 +31,9 @@ class Page_Controller extends \ContentController
 	{
 		Requirements::set_backend(new BetterRequirements_Backend());
 		parent::init();
-		Requirements::javascript('https://maps.googleapis.com/maps/api/js');
 		Requirements::set_combined_files_folder(project() . '/_combinedfiles');
 		Requirements::set_force_js_to_bottom(true);
+		Requirements::javascript('https://maps.googleapis.com/maps/api/js');
 		$this->requireJS();
 		Requirements::clear(project() . '/css/editor.css');
 		$this->requireCSS();

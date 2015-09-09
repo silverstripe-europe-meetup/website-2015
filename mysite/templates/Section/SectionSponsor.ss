@@ -4,9 +4,12 @@
             <div class="section-inner">
                 <div class="content typography">
                     <h3 class="section-title">$Title</h3>
-					$Content
+					<div class="sponsor-item principal">
+						$Content
+					</div>
+					<div class="clear"></div>
 					<% if $Sponsors('Platinum').count %>
-                        <h3 class="center sponsor-type">Platinum</h3>
+                        <h3 class="center sponsor-type-platinum">Platinum</h3>
 						<% loop $Sponsors('Platinum') %>
                             <div class="center $EvenOdd sponsor-item platinum">
                                 <a href="$URL" class="logo-<% if $Odd %>left<% else %>right<% end_if %>" Title="$Title"
@@ -20,7 +23,6 @@
 						<% end_loop %>
 					<% end_if %>
 					<% if $Sponsors('Gold').count %>
-                        <div class="clear"></div>
                         <h3 class="center sponsor-type">Gold</h3>
 						<% loop $Sponsors('Gold') %>
                             <div class="center $EvenOdd sponsor-item gold">
@@ -35,7 +37,6 @@
 						<% end_loop %>
 					<% end_if %>
 					<% if $Sponsors('Silver').count %>
-                        <div class="clear"></div>
                         <h3 class="center sponsor-type">Silver</h3>
 						<% loop $Sponsors('Silver') %>
                             <div class="center $EvenOdd sponsor-item silver">
@@ -52,7 +53,6 @@
 						<% end_loop %>
 					<% end_if %>
 					<% if $Sponsors('Bronze').count %>
-                        <div class="clear"></div>
                         <h3 class="center sponsor-type">Bronze</h3>
 						<% loop $Sponsors('Bronze') %>
                             <div class="center $EvenOdd sponsor-item bronze">
