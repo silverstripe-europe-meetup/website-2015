@@ -1,21 +1,43 @@
 <?php
 
+/**
+ * @inheritdoc
+ * Class ExtendedIterator does things with the template iterator
+ */
+class ExtendedIterator implements TemplateIteratorProvider
+{
 
-class ExtendedIterator implements TemplateIteratorProvider {
-
+	/**
+	 * @var
+     */
 	protected $iteratorPos;
+	/**
+	 * @var
+     */
 	protected $iteratorTotalItems;
 
-	public static function get_template_iterator_variables() {
+	/**
+	 * @inheritdoc
+     */
+	public static function get_template_iterator_variables()
+	{
 		return array('PosGold');
 	}
 
-	public function iteratorProperties($pos, $totalItems) {
-		$this->iteratorPos        = $pos;
+	/**
+	 * @inheritdoc
+     */
+	public function iteratorProperties($pos, $totalItems)
+	{
+		$this->iteratorPos = $pos;
 		$this->iteratorTotalItems = $totalItems;
 	}
 
-	public function PosGold() {
+	/**
+	 * @return int
+     */
+	public function PosGold()
+	{
 		$platinum = Sponsor::get()->filter(array('Type' => 'Platinum'))->count();
 		return ($this->iteratorPos + $platinum) % 2;
 	}

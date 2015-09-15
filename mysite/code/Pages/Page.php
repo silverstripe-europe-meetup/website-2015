@@ -117,6 +117,7 @@ class Page_Controller extends \ContentController
 			project() . '/scss/footer.scss',
 			project() . '/scss/layout.scss',
 			project() . '/scss/sponsors.scss',
+			project() . '/scss/talk.scss',
 			project() . '/scss/legacy.scss',
 		]);
 		Requirements::css(project() . '/scss/editor.scss');

@@ -1,0 +1,31 @@
+@import "config";
+.talk-item  {
+	margin-bottom: gutter();
+	img {
+		max-width: 100%;
+	}
+
+	&.silver, &.bronze {
+		@include span(6);
+		&.even {
+			@include span(last);
+		}
+		.impression-left {
+			@include span(2 of 6);
+		}
+		.content-left {
+			@include span(4 of 6);
+		}
+		.content-right {
+			@include span(4 of 6 last);
+			margin-bottom: gutter();
+		}
+		.impression-right {
+			@include span(2 of 6 last);
+			margin-bottom: gutter();
+		}
+	}
+	&.principal {
+		margin-bottom: gutter();
+	}
+}
