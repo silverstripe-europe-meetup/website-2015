@@ -33,9 +33,7 @@ class Page_Controller extends \ContentController
 		parent::init();
 		Requirements::set_combined_files_folder(project() . '/_combinedfiles');
 		Requirements::set_force_js_to_bottom(true);
-		Requirements::javascript('https://maps.googleapis.com/maps/api/js');
 		$this->requireJS();
-		Requirements::clear(project() . '/css/editor.css');
 		$this->requireCSS();
 	}
 
@@ -94,6 +92,7 @@ class Page_Controller extends \ContentController
 
 	public function requireJS()
 	{
+		Requirements::javascript('https://maps.googleapis.com/maps/api/js');
 		Requirements::combine_files('main.js', [
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery/dist/jquery.min.js',
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery.entwine/dist/jquery.entwine-dist.js',
@@ -108,6 +107,7 @@ class Page_Controller extends \ContentController
 	public function requireCSS()
 	{
 		Requirements::combine_files('main.css', [
+			project() . '/scss/fonts.scss',
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/normalize-css/normalize.css',
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/magnific-popup.css',
 			project() . '/scss/screen.scss',
@@ -122,7 +122,6 @@ class Page_Controller extends \ContentController
 		]);
 		Requirements::css(project() . '/scss/editor.scss');
 		Requirements::clear(project() . '/css/editor.css');
-		Requirements::css('//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700');
 	}
 
 	public function onAfterWrite(){
