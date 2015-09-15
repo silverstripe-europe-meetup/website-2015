@@ -12,7 +12,7 @@
 						<% loop $Talks('Fri') %>
                             <div class="center $EvenOdd talk-item silver">
                                 <div class="impression-<% if $Odd %>left<% else %>right<% end_if %>" Title="$Title">
-									$Impression.PaddedImage(100,100,E0E0E0)
+									$Impression.SetRatioSize(100,100)
                                 </div>
 
                                 <div class="content-<% if $Odd %>right<% else %>left<% end_if %>">
@@ -32,7 +32,7 @@
 						<% loop $Talks('Sat') %>
                             <div class="center $EvenOdd talk-item silver">
                                 <div class="impression-<% if $Odd %>left<% else %>right<% end_if %>" Title="$Title">
-                                    $Impression.PaddedImage(100,100,E0E0E0)
+									$Impression.SetRatioSize(100,100)
                                 </div>
                                 <div class="content-<% if $Odd %>right<% else %>left<% end_if %>">
                                     <strong>$Title</strong><br />
