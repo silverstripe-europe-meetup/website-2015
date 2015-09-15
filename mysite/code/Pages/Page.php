@@ -119,12 +119,14 @@ class Page_Controller extends \ContentController
 			project() . '/scss/sponsors.scss',
 			project() . '/scss/talk.scss',
 			project() . '/scss/legacy.scss',
-			project() . '/scss/editor.scss'
 		]);
+		Requirements::css(project() . '/scss/editor.scss');
 		Requirements::clear(project() . '/css/editor.css');
 	}
 
 	public function onAfterWrite(){
 		parent::onAfterWrite();
+
+
 	}
 }
