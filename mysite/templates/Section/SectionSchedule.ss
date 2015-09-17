@@ -14,7 +14,7 @@
                         <li class="spacer"></li>
                         <li rel="tab2">Friday</li>
                         <li class="spacer"></li>
-                        <li rel="tab3 last">Saturday</li>
+                        <li rel="tab3">Saturday</li>
                         <li class="spacer big-spacer last"></li>
                     </ul>
                     <div class="tab_container">
@@ -82,7 +82,6 @@
                         <h3 class="tab_drawer_heading" rel="tab3">Saturday</h3>
 
                         <div id="tab3" class="tab_content">
-							$Talks('Sat').count
 							<% if $Talks('Sat').count %>
 								<% loop $Talks('Sat') %>
                                     <div class="$EvenOdd talk-item">
