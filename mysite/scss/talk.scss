@@ -41,7 +41,7 @@
 		padding: 5px 20px;
 		line-height: 31px;
 		color: $color-grey-light;
-		background-color: $color-blue-light;
+		background-color: $color-blue-dark;
 		text-align: center;
 	}
 
@@ -66,7 +66,7 @@
 	}
 
 	ul.tabs li.active, ul.tabs li.active:hover {
-		background-color: $color-blue-dark;
+		background-color: $color-blue-light;
 		color: $color-grey-light;
 		display: block;
 	}

@@ -24,7 +24,7 @@
 							<% if $Talks('Thu').count %>
 								<% loop $Talks('Thu') %>
                                     <div class="$EvenOdd talk-item">
-                                        <div class="impression" Title="$Title">
+                                        <div class="center impression" Title="$Title">
 											$Impression.SetRatioSize(100,100)<br/>
                                             <i>$Speaker</i>
                                         </div>
@@ -48,7 +48,7 @@
 							<% if $Talks('Fri').count %>
 								<% loop $Talks('Fri') %>
                                     <div class="$EvenOdd talk-item">
-                                        <div class="impression" Title="$Title">
+                                        <div class="center impression" Title="$Title">
 											$Impression.SetRatioSize(100,100)<br/>
                                             <i>$Speaker</i>
                                         </div>
@@ -85,7 +85,7 @@
 							<% if $Talks('Sat').count %>
 								<% loop $Talks('Sat') %>
                                     <div class="$EvenOdd talk-item">
-                                        <div class="impression" Title="$Title">
+                                        <div class="center impression" Title="$Title">
 											$Impression.SetRatioSize(100,100)<br/>
                                             <i>$Speaker</i>
                                         </div>
