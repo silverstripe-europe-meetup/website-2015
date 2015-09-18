@@ -1,32 +1,126 @@
 @import "config";
-.talk-item  {
+
+#section-schedule {
 	margin-bottom: gutter();
-	img {
-		max-width: 100%;
-		margin-top: 6px;
+	.talk-item {
+		height: 152px;
+		border-bottom: 1px solid $color-grey-light;
+		padding: 15px 5px;
+		&:first-child {
+			border-top: 1px solid $color-grey-light;
+		}
+		img {
+			max-width: 100%;
+			margin-top: 6px;
+			border-radius: 50%;
+		}
+		div {
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+		@include span(12 last);
+		.impression {
+			@include span(2 of 12);
+		}
+		.time {
+			@include span(2 of 12);
+		}
+		.content {
+			p {
+				margin: 0;
+			}
+			@include span(8 of 12 last);
+		}
 	}
 
-	&.silver, &.bronze {
-		@include span(6);
-		&.even {
+	ul.tabs {
+		@include span(12);
+		float: left;
+		list-style: none;
+		height: 32px;
+	}
+
+	ul.tabs li {
+		@include span(2 of 12);
+		margin: 0 15px 0 0;
+		border-radius: 45px;
+		cursor: pointer;
+		padding: 5px 20px;
+		line-height: 31px;
+		color: $color-grey-light;
+		background-color: $color-blue-dark;
+		text-align: center;
+	}
+
+	ul.tabs li.spacer, ul.tabs li.spacer:hover {
+		background-color: transparent;
+		@include span(1 of 12);
+	}
+	ul.tabs li.big-spacer {
+		@include span(2 of 12);
+		&.last {
 			@include span(last);
 		}
-		.impression-left {
-			@include span(2 of 6);
-		}
-		.content-left {
-			@include span(4 of 6);
-		}
-		.content-right {
-			@include span(4 of 6 last);
-			margin-bottom: gutter();
-		}
-		.impression-right {
-			@include span(2 of 6 last);
-			margin-bottom: gutter();
-		}
 	}
-	&.principal {
-		margin-bottom: gutter();
+
+	ul.tabs li.last {
+		@include span(3 of 12 last);
+	}
+
+	ul.tabs li:hover {
+		color: $color-grey-light;
+		background-color: $color-blue;
+	}
+
+	ul.tabs li.active, ul.tabs li.active:hover {
+		background-color: $color-blue-light;
+		color: $color-grey-light;
+		display: block;
+	}
+
+	.tab_container {
+		@include span(12);
+		border-top: none;
+		clear: both;
+		width: 100%;
+		overflow: auto;
+	}
+
+	.tab_content {
+		padding: 20px;
+		display: none;
+	}
+
+	.tab_drawer_heading {
+		display: none;
+	}
+
+	@media screen and (max-width: 480px) {
+		.tabs {
+			display: none;
+		}
+		.tab_drawer_heading {
+			background-color: $color-blue-light;
+			color: #fff;
+			margin: 0;
+			padding: 5px 20px;
+			display: block;
+			cursor: pointer;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		.d_active {
+			background-color: $color-blue;
+			color: #fff;
+		}
 	}
 }

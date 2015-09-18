@@ -15,6 +15,7 @@
  * @property string Room
  * @property string Day
  * @property string Start
+ * @property string End
  * @property int ImpressionID
  * @method Image Impression
  * EndGeneratedWithDataObjectAnnotator
@@ -29,9 +30,20 @@ class Talk extends DataObject
 		'Room'    => 'Varchar(255)',
 		'Day'     => 'Enum("Thu,Fri,Sat")',
 		'Start'   => 'Time',
+		'End'     => 'Time',
 	);
 
 	private static $has_one = array(
 		'Impression' => 'Image'
 	);
+
+	private static $summary_fields = array(
+		'Title',
+		'Speaker',
+		'Day',
+		'Start',
+		'End'
+	);
+
+	private static $default_sort = 'Day, Start ASC';
 }

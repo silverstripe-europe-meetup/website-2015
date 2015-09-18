@@ -1,53 +1,103 @@
 <% cached $URLSegment %>
     <div class="background background-$BackgroundColor">
         <div class="section-inner-container">
-            <div class="section-inner">
+            <div class="section-inner section-talks">
                 <div class="content typography">
                     <h2 class="section-title">$Title</h2>
+
                     <div class="main-content">
 						$Content
                     </div>
-					<% if $Talks('Fri').count %>
-                        <h3 class="center talk-type">Friday</h3>
-						<% loop $Talks('Fri') %>
-                            <div class="center $EvenOdd talk-item silver">
-                                <div class="impression-<% if $Odd %>left<% else %>right<% end_if %>" Title="$Title">
-									$Impression.SetRatioSize(100,100)
-                                </div>
+                    <ul class="tabs">
+                        <li class="spacer big-spacer"></li>
+                        <li class="active" rel="tab1">Thursday</li>
+                        <li class="spacer"></li>
+                        <li rel="tab2">Friday</li>
+                        <li class="spacer"></li>
+                        <li rel="tab3">Saturday</li>
+                        <li class="spacer big-spacer last"></li>
+                    </ul>
+                    <div class="tab_container">
+                        <h4 class="d_active tab_drawer_heading" rel="tab1">Thursday</h4>
 
-                                <div class="content-<% if $Odd %>right<% else %>left<% end_if %>">
-                                    <strong>$Title</strong><br />
-                                    <i>$Speaker</i><br />
-                                    <i>$Start.Format('H:i')</i><br />
-									$Content.ContextSummary(175)
-								</div>
-                            </div>
-							<% if $Even %>
-                                <div class="clear"></div>
+                        <div id="tab1" class="tab_content">
+							<% if $Talks('Thu').count %>
+								<% loop $Talks('Thu') %>
+                                    <div class="$EvenOdd talk-item">
+                                        <div class="center impression" Title="$Title">
+											$Impression.SetRatioSize(100,100)<br/>
+                                            <i>$Speaker</i>
+                                        </div>
+                                        <div class="center time">
+                                            $Start.Format('H:i')<br/>
+                                            -<br/>
+                                            $End.Format('H:i')
+                                        </div>
+                                        <div class="content">
+                                            <strong>$Title</strong><br/>
+											$Content
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+								<% end_loop %>
 							<% end_if %>
-						<% end_loop %>
-					<% end_if %>
-					<% if $Talks('Sat').count %>
-                        <h3 class="center talk-type">Saturday</h3>
-						<% loop $Talks('Sat') %>
-                            <div class="center $EvenOdd talk-item silver">
-                                <div class="impression-<% if $Odd %>left<% else %>right<% end_if %>" Title="$Title">
-									$Impression.SetRatioSize(100,100)
-                                </div>
-                                <div class="content-<% if $Odd %>right<% else %>left<% end_if %>">
-                                    <strong>$Title</strong><br />
-                                    <i>$Speaker</i><br />
-                                    <i>{$Room}: $Start.Format('H:i')</i><br />
-									$Content.ContextSummary(175)
-                                </div>
-                            </div>
-							<% if $Even %>
-                                <div class="clear"></div>
+                        </div>
+                        <h3 class="tab_drawer_heading" rel="tab2">Friday</h3>
+
+                        <div id="tab2" class="tab_content">
+							<% if $Talks('Fri').count %>
+								<% loop $Talks('Fri') %>
+                                    <div class="$EvenOdd talk-item">
+                                        <div class="center impression" Title="$Title">
+											$Impression.SetRatioSize(100,100)<br/>
+                                            <i>$Speaker</i>
+                                        </div>
+                                        <div class="center time">
+                                            $Start.Format('H:i')<br/>
+                                            -<br/>
+                                            $End.Format('H:i')
+                                        </div>
+                                        <div class="content">
+                                            <strong>$Title</strong><br/>
+											$Content
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+								<% end_loop %>
 							<% end_if %>
-						<% end_loop %>
-					<% end_if %>
-                    <div class="clear"></div>
+                        </div>
+
+                        <h3 class="tab_drawer_heading" rel="tab3">Saturday</h3>
+
+                        <div id="tab3" class="tab_content">
+							<% if $Talks('Sat').count %>
+								<% loop $Talks('Sat') %>
+                                    <div class="$EvenOdd talk-item">
+                                        <div class="center impression" Title="$Title">
+											$Impression.SetRatioSize(100,100)<br/>
+                                            <i>$Speaker</i>
+                                        </div>
+                                        <div class="center time">
+                                            $Start.Format('H:i')<br/>
+                                            -<br/>
+                                            $End.Format('H:i')
+											<% if $Room %>
+                                                <br/>
+												$Room
+											<% end_if %>
+                                        </div>
+                                        <div class="content">
+                                            <strong>$Title</strong><br/>
+											$Content
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+								<% end_loop %>
+							<% end_if %>
+                        </div>
+                    </div>
                 </div>
+                <div class="clear"></div>
             </div>
         </div>
     </div>
