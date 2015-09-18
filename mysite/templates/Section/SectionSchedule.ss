@@ -64,18 +64,6 @@
                                     </div>
                                     <div class="clear"></div>
 								<% end_loop %>
-							<% else %>
-                                <div class="$EvenOdd talk-item">
-                                    <div class="impression">
-                                    </div>
-                                    <div class="center time">
-                                    </div>
-                                    <div class="content">
-                                        <strong>No information yet.</strong><br/>
-                                        This section will be updated as soon as possible.
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
 							<% end_if %>
                         </div>
 
@@ -93,6 +81,10 @@
                                             <i>$Start.Format('H:i')</i><br/>
                                             -<br/>
                                             <i>$End.Format('H:i')</i>
+											<% if $Room %>
+                                                <br/>
+												$Room
+											<% end_if %>
                                         </div>
                                         <div class="content">
                                             <strong>$Title</strong><br/>
@@ -101,18 +93,6 @@
                                     </div>
                                     <div class="clear"></div>
 								<% end_loop %>
-							<% else %>
-                                <div class="$EvenOdd talk-item">
-                                    <div class="impression">
-                                    </div>
-                                    <div class="center time">
-                                    </div>
-                                    <div class="content">
-                                        <strong>No information yet.</strong><br/>
-                                        This section will be updated as soon as possible.
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
 							<% end_if %>
                         </div>
                     </div>
