@@ -29,9 +29,9 @@
                                             <i>$Speaker</i>
                                         </div>
                                         <div class="center time">
-                                            <i>$Start.Format('H:i')</i><br/>
+                                            $Start.Format('H:i')<br/>
                                             -<br/>
-                                            <i>$End.Format('H:i')</i>
+                                            $End.Format('H:i')
                                         </div>
                                         <div class="content">
                                             <strong>$Title</strong><br/>
@@ -53,9 +53,9 @@
                                             <i>$Speaker</i>
                                         </div>
                                         <div class="center time">
-                                            <i>$Start.Format('H:i')</i><br/>
+                                            $Start.Format('H:i')<br/>
                                             -<br/>
-                                            <i>$End.Format('H:i')</i>
+                                            $End.Format('H:i')
                                         </div>
                                         <div class="content">
                                             <strong>$Title</strong><br/>
@@ -78,9 +78,9 @@
                                             <i>$Speaker</i>
                                         </div>
                                         <div class="center time">
-                                            <i>$Start.Format('H:i')</i><br/>
+                                            $Start.Format('H:i')<br/>
                                             -<br/>
-                                            <i>$End.Format('H:i')</i>
+                                            $End.Format('H:i')
 											<% if $Room %>
                                                 <br/>
 												$Room
