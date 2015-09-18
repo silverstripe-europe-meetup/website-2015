@@ -3,6 +3,7 @@
 #section-schedule {
 	margin-bottom: gutter();
 	.talk-item {
+		height: 152px;
 		border-bottom: 1px solid $color-grey-light;
 		padding: 15px 5px;
 		&:first-child {
@@ -13,7 +14,15 @@
 			margin-top: 6px;
 			border-radius: 50%;
 		}
-
+		div {
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
 		@include span(12 last);
 		.impression {
 			@include span(2 of 12);
@@ -22,6 +31,9 @@
 			@include span(2 of 12);
 		}
 		.content {
+			p {
+				margin: 0;
+			}
 			@include span(8 of 12 last);
 		}
 	}

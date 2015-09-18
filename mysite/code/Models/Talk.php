@@ -36,4 +36,14 @@ class Talk extends DataObject
 	private static $has_one = array(
 		'Impression' => 'Image'
 	);
+
+	private static $summary_fields = array(
+		'Title',
+		'Speaker',
+		'Day',
+		'Start',
+		'End'
+	);
+
+	private static $default_sort = 'Start ASC';
 }

@@ -39,4 +39,17 @@ class SectionSchedule extends SectionBase
 	{
 		return Talk::get()->filter(array('Day' => $day))->sort('Start ASC');
 	}
+
+	public function isActive() {
+		if (date('Y-m-d') <= '2015-08 -15') {
+			return 'active';
+		}
+		elseif (date('Y-m-d') === '2015-09-17') {
+			return 'active';
+		}
+		elseif (date('Y-m-d') === '2015-10-17') {
+			return 'active';
+		}
+		return '';
+	}
 }
