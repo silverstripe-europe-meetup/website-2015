@@ -45,5 +45,5 @@ class Talk extends DataObject
 		'End'
 	);
 
-	private static $default_sort = 'Start ASC';
+	private static $default_sort = 'Day, Start ASC';
 }
