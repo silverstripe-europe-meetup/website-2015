@@ -20,24 +20,24 @@ $color-grey-light: #E0E0E0;
 $color-grey-dark: #232730;
 
 $colors: (
-		blue-light: $color-blue-light,
-		blue: $color-blue,
-		blue-dark: $color-blue-dark,
-		green: $color-green,
-		pink: $color-pink,
-		grey-light: $color-grey-light,
-		grey-dark: $color-grey-dark,
-		white: #FFF,
+	blue-light: $color-blue-light,
+	blue: $color-blue,
+	blue-dark: $color-blue-dark,
+	green: $color-green,
+	pink: $color-pink,
+	grey-light: $color-grey-light,
+	grey-dark: $color-grey-dark,
+	white: #FFF,
 );
 $colors-contrast: (
-		blue-light: #FFF,
-		blue: #FFF,
-		blue-dark: #FFF,
-		green: #FFF,
-		pink: #FFF,
-		grey-light: $color-grey-dark,
-		grey-dark: $color-grey-light,
-		white: #FFF,
+	blue-light: #FFF,
+	blue: #FFF,
+	blue-dark: #FFF,
+	green: #FFF,
+	pink: #FFF,
+	grey-light: $color-grey-dark,
+	grey-dark: $color-grey-light,
+	white: #FFF,
 );
 
 $text-color: #353535;
@@ -69,21 +69,21 @@ $breakpoint-fallback-class: '.no-mediaqueries';
 $total-columns: 12;
 
 $susy: (
-		math: fluid,
-		output: float,
-		gutter-position: after,
-		container: $container-width,
-		container-position: center,
-		columns: $total-columns,
-		gutters: 1,
-		column-width: false,
-		global-box-sizing: border-box,
-		last-flow: to,
-		use-custom: (
-				background-image: true,
-				background-options: false,
-				box-sizing: true,
-				clearfix: false,
-				rem: true,
-		),
+	math: fluid,
+	output: float,
+	gutter-position: after,
+	container: $container-width,
+	container-position: center,
+	columns: $total-columns,
+	gutters: 1,
+	column-width: false,
+	global-box-sizing: border-box,
+	last-flow: to,
+	use-custom: (
+		background-image: true,
+		background-options: false,
+		box-sizing: true,
+		clearfix: false,
+		rem: true,
+	),
 );

@@ -18,7 +18,7 @@ class SectionSponsor extends SectionBase
 	private
 	static $db = [
 		'BackgroundColor' => 'Varchar',
-		'AfterContent' => 'HTMLText',
+		'AfterContent'    => 'HTMLText',
 	];
 	private
 	static $defaults = [

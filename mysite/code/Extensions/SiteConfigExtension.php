@@ -8,16 +8,18 @@
  * @property string FooterContentRight
  * EndGeneratedWithDataObjectAnnotator
  */
-class mysiteSiteConfigExtension extends \DataExtension {
+class mysiteSiteConfigExtension extends \DataExtension
+{
 	private static $db = [
-		'FooterContentLeft' => 'HTMLText',
+		'FooterContentLeft'  => 'HTMLText',
 		'FooterContentRight' => 'HTMLText',
 	];
 
 	/**
 	 * @param \FieldList $fields
 	 */
-	public function updateCMSFields(\FieldList $fields) {
+	public function updateCMSFields(\FieldList $fields)
+	{
 		$fields->removeByName('Theme');
 		$fields->addFieldsToTab('Root', [
 			new Tab('Footer', _t('SiteConfig.FooterTab', 'Footer')),

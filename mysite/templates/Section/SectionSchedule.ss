@@ -23,22 +23,7 @@
                         <div id="tab1" class="tab_content">
 							<% if $Talks('Thu').count %>
 								<% loop $Talks('Thu') %>
-                                    <div class="$EvenOdd talk-item">
-                                        <div class="center impression" Title="$Title">
-											$Impression.SetRatioSize(100,100)<br/>
-                                            <i>$Speaker</i>
-                                        </div>
-                                        <div class="center time">
-                                            $Start.Format('H:i')<br/>
-                                            -<br/>
-                                            $End.Format('H:i')
-                                        </div>
-                                        <div class="content">
-                                            <strong>$Title</strong><br/>
-											$Content
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
+									<% include TalkItem %>
 								<% end_loop %>
 							<% end_if %>
                         </div>
@@ -47,22 +32,7 @@
                         <div id="tab2" class="tab_content">
 							<% if $Talks('Fri').count %>
 								<% loop $Talks('Fri') %>
-                                    <div class="$EvenOdd talk-item">
-                                        <div class="center impression" Title="$Title">
-											$Impression.SetRatioSize(100,100)<br/>
-                                            <i>$Speaker</i>
-                                        </div>
-                                        <div class="center time">
-                                            $Start.Format('H:i')<br/>
-                                            -<br/>
-                                            $End.Format('H:i')
-                                        </div>
-                                        <div class="content">
-                                            <strong>$Title</strong><br/>
-											$Content
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
+									<% include TalkItem %>
 								<% end_loop %>
 							<% end_if %>
                         </div>
@@ -72,26 +42,7 @@
                         <div id="tab3" class="tab_content">
 							<% if $Talks('Sat').count %>
 								<% loop $Talks('Sat') %>
-                                    <div class="$EvenOdd talk-item">
-                                        <div class="center impression" Title="$Title">
-											$Impression.SetRatioSize(100,100)<br/>
-                                            <i>$Speaker</i>
-                                        </div>
-                                        <div class="center time">
-                                            $Start.Format('H:i')<br/>
-                                            -<br/>
-                                            $End.Format('H:i')
-											<% if $Room %>
-                                                <br/>
-												$Room
-											<% end_if %>
-                                        </div>
-                                        <div class="content">
-                                            <strong>$Title</strong><br/>
-											$Content
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
+									<% include TalkItem %>
 								<% end_loop %>
 							<% end_if %>
                         </div>

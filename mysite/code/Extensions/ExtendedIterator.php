@@ -9,16 +9,16 @@ class ExtendedIterator implements TemplateIteratorProvider
 
 	/**
 	 * @var
-     */
+	 */
 	protected $iteratorPos;
 	/**
 	 * @var
-     */
+	 */
 	protected $iteratorTotalItems;
 
 	/**
 	 * @inheritdoc
-     */
+	 */
 	public static function get_template_iterator_variables()
 	{
 		return array('PosGold');
@@ -26,7 +26,7 @@ class ExtendedIterator implements TemplateIteratorProvider
 
 	/**
 	 * @inheritdoc
-     */
+	 */
 	public function iteratorProperties($pos, $totalItems)
 	{
 		$this->iteratorPos = $pos;
@@ -35,7 +35,7 @@ class ExtendedIterator implements TemplateIteratorProvider
 
 	/**
 	 * @return int
-     */
+	 */
 	public function PosGold()
 	{
 		$platinum = Sponsor::get()->filter(array('Type' => 'Platinum'))->count();
