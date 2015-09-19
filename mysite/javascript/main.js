@@ -201,4 +201,5 @@ $(".tab_drawer_heading").click(function () {
 
 	$("ul.tabs li").removeClass("active");
 	$("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
+	$(".tab_drawer_heading").get(0).scrollIntoView();
 });
