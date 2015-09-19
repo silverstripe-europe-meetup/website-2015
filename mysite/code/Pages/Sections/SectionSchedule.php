@@ -39,7 +39,7 @@ class SectionSchedule extends SectionBase
 	{
 		$talks = Talk::get()->filter(array('Day' => $day))->sort('Start ASC');
 		if($day === 'Sat') {
-			$talks = GroupedList::create($talks->sort('Start ASC'));
+			$talks = GroupedList::create($talks->sort('Start ASC, Room ASC'));
 		}
 		return $talks;
 	}

@@ -63,6 +63,11 @@ class Talk extends DataObject
 		return $fields;
 	}
 
+
+	public function hour() {
+		return date('H', strtotime($this->Start));
+	}
+
 	public function roomName() {
 		return self::$rooms[$this->Room];
 	}

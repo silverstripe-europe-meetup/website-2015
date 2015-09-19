@@ -41,9 +41,9 @@
 
                         <div id="tab3" class="tab_content">
 							<% if $Talks('Sat').count %>
-								<% loop $Talks('Sat').GroupedBy('Start') %>
+								<% loop $Talks('Sat').GroupedBy('hour') %>
                                     <br/>
-                                       <h4 class="center">$Start</h4>
+                                       <h4 class="center">$hour:00</h4>
 									<% loop $Children %>
 										<% include TalkItem %>
 									<% end_loop %>
