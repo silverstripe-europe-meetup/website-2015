@@ -6,7 +6,7 @@
 	<% base_tag %>
     <title>$Subject</title>
     <style type="text/css">
-                /* Client-specific Styles */
+        /* Client-specific Styles */
         #outlook a {
             padding: 0;
         }
@@ -60,7 +60,7 @@
 */
         #templateContainer {
             border: 1px solid #333333;
-            background-color: #142136 ;
+            background-color: #142136;
         }
 
         /**
@@ -101,7 +101,7 @@
 * @theme main
 */
         .bodyContent div {
-            color: #142136 ;
+            color: #142136;
             font-family: 'Source Sans Pro', sans-serif;
             font-size: 13pt;
             line-height: 140%;
@@ -109,7 +109,7 @@
         }
 
         .bodyContent div a {
-            color: #142136 ;
+            color: #142136;
         }
 
         /**
@@ -144,13 +144,13 @@
                                     <td valign="top" class="bodyContent" sytle="border-collapse:collapse;">
                                         <div sytle="color:#142136 ;font-family:'Lucida Sans Unicode',sans-serif,Verdana,Arial;font-size:13pt;line-height:140%;text-align:left;">
                                             <strong>Title</strong>: $Subject<br/>
-                                            <strong>Message</strong>:<br />
-                                            $Content<br />
-                                            Send by<br />
+                                            <strong>Message</strong>:<br/>
+											$Content<br/>
+                                            Send by<br/>
                                             <strong>Name</strong>: $Name<br/>
                                             <strong>Email address</strong>: $Email<br/>
-											Send to<br />
-											<strong>$Target</strong>
+                                            Send to<br/>
+                                            <strong>$Target</strong>
                                         </div>
                                     </td>
                                 </tr>

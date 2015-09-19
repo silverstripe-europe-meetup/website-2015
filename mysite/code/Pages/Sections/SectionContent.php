@@ -6,7 +6,8 @@
  * @property string BackgroundColor
  * EndGeneratedWithDataObjectAnnotator
  */
-class SectionContent extends SectionBase {
+class SectionContent extends SectionBase
+{
 	private static $db = [
 		'BackgroundColor' => 'Varchar',
 	];
@@ -14,13 +15,14 @@ class SectionContent extends SectionBase {
 		'BackgroundColor' => 'grey-light',
 	];
 
-	public function getCMSFields() {
+	public function getCMSFields()
+	{
 		$return = parent::getCMSFields();
 		$return->addFieldsToTab('Root.Main', [
 			new ColorPaletteField('BackgroundColor', $this->fieldLabel('BackgroundColor'), [
 				'grey-light' => '#F6F6F6',
-				'white' => '#FFF',
-				'blue-dark' => '#015790',
+				'white'      => '#FFF',
+				'blue-dark'  => '#015790',
 			]),
 		], 'Content');
 		return $return;

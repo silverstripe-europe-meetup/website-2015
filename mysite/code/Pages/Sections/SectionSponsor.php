@@ -18,7 +18,7 @@ class SectionSponsor extends SectionBase
 	private
 	static $db = [
 		'BackgroundColor' => 'Varchar',
-		'AfterContent' => 'HTMLText',
+		'AfterContent'    => 'HTMLText',
 	];
 	private
 	static $defaults = [
@@ -42,6 +42,6 @@ class SectionSponsor extends SectionBase
 
 	public function Sponsors($type = '')
 	{
-		return Sponsor::get()->filter(array('Type' => $type));
+		return Sponsor::get()->filter(array('Type' => $type))->sort('RAND()');
 	}
 }

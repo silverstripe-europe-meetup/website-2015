@@ -5,12 +5,14 @@
  * @method SectionBase[]|\ArrayList AllChildren
  * @method SectionBase[]|\ArrayList Children
  */
-class SectionHolderPage extends Page {
+class SectionHolderPage extends Page
+{
 	private static $allowed_children = [
 		'SectionBase',
 	];
 
-	public function getCMSFields() {
+	public function getCMSFields()
+	{
 		$return = parent::getCMSFields();
 		$return->removeByName('Content');
 		return $return;
@@ -22,7 +24,8 @@ class SectionHolderPage extends Page {
 	 * Get list of all Pages to be displayed as LayoutSection
 	 * @return \ArrayList|\SiteTree[]
 	 */
-	public function LayoutSections() {
+	public function LayoutSections()
+	{
 		if (!$this->_cachedLayoutSections) {
 			$this->_cachedLayoutSections = new \ArrayList();
 
@@ -38,7 +41,8 @@ class SectionHolderPage extends Page {
 		return $this->_cachedLayoutSections;
 	}
 
-	public function LayoutSectionsMenu() {
+	public function LayoutSectionsMenu()
+	{
 		return $this->LayoutSections()->filterByCallback(function ($child) {
 			return !!$child->ShowInMenus;
 		});
@@ -50,5 +54,6 @@ class SectionHolderPage extends Page {
  * @property SectionHolderPage dataRecord
  * @method SectionHolderPage data
  */
-class SectionHolderPage_Controller extends Page_Controller {
+class SectionHolderPage_Controller extends Page_Controller
+{
 }

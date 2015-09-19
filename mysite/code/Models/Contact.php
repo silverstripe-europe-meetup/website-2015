@@ -36,10 +36,10 @@ class Contact extends DataObject
 	);
 
 	protected static $to = array(
-		'talks@silverstripe-europe.org' => 'Talks',
+		'talks@silverstripe-europe.org'    => 'Talks',
 		'register@silverstripe-europe.org' => 'Registration',
 		'sponsors@silverstripe-europe.org' => 'Sponsoring',
-		'info@silverstripe-europe.org' => 'The team',
+		'info@silverstripe-europe.org'     => 'The team',
 	);
 
 	/**
