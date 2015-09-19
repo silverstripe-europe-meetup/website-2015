@@ -4,7 +4,7 @@
 	margin-bottom: gutter();
 	.talk-item {
 		@include span(12 last);
-		height: 152px;
+		height: 160px;
 		border-bottom: 1px solid $color-grey-light;
 		border-top: 1px solid $color-grey-light;
 		margin-top: -1px;
