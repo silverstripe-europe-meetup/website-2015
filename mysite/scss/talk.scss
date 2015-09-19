@@ -50,7 +50,7 @@
 		padding: 5px 0;
 		line-height: 31px;
 		background-color: $color-blue-dark;
-		color: $color-grey-light;
+		color: #FFF;
 		text-align: center;
 		transition: all 300ms ease 0s;
 		margin-right: 0;
@@ -103,7 +103,7 @@
 		}
 		.tab_drawer_heading {
 			background-color: $color-blue-light;
-			color: $color-grey-light;
+			color: #FFF;
 			margin: 0;
 			padding: 5px 0 5px 5px;
 			display: block;
@@ -117,7 +117,7 @@
 		}
 		.d_active {
 			background-color: $color-blue;
-			color: $color-grey-light;
+			color: #FFF;
 		}
 		.talk-item {
 			padding: 0;
