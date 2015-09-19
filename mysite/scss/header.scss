@@ -87,7 +87,7 @@ header {
 
 @include breakpoint-with-fallback(700px) {
 	.header-push {
-		height: 70px;
+		height: 60px;
 	}
 	header {
 		position: fixed;
