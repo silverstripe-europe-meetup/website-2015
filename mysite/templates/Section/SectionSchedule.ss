@@ -44,7 +44,7 @@
 								<% loop $Talks('Sat').GroupedBy('Room') %>
                                     <br/>
 									<% if $Room == 0 %>
-                                        <h4 class="center">Room $Room: Main/other</h4>
+                                        <h4 class="center">Main/other</h4>
 									<% else_if $Room == 1 %>
                                         <h4 class="center">Room $Room: Design/Frontend</h4>
 									<% else_if $Room == 2 %>
