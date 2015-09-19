@@ -51,9 +51,9 @@ class Page_Controller extends \ContentController
 			)
 		);
 		$Action = FieldList::create(
-			$btn = FormAction::create('HandleForm', 'Send')
+			$btn = FormAction::create('HandleForm', 'Submit')
 		);
-		$btn->addExtraClass('btn btn-sm btn-default');
+		$btn->addExtraClass('button-green-full');
 		$Required = RequiredFields::create(
 			array(
 				'Name',
