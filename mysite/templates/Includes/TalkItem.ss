@@ -9,6 +9,9 @@
 		$End.Format('H:i')
     </div>
     <div class="content">
+		<% if $Room %>
+            <i>Room $Room: $roomName</i><br />
+		<% end_if %>
         <strong>$Title</strong><br/>
 		$Content
     </div>

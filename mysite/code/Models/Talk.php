@@ -62,4 +62,8 @@ class Talk extends DataObject
 		$fields->addFieldToTab('Root.Main', DropdownField::create('Room', 'Room', self::$rooms));
 		return $fields;
 	}
+
+	public function roomName() {
+		return self::$rooms[$this->Room];
+	}
 }

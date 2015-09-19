@@ -41,17 +41,9 @@
 
                         <div id="tab3" class="tab_content">
 							<% if $Talks('Sat').count %>
-								<% loop $Talks('Sat').GroupedBy('Room') %>
+								<% loop $Talks('Sat').GroupedBy('Start') %>
                                     <br/>
-									<% if $Room == 0 %>
-                                        <h4 class="center">Main/other</h4>
-									<% else_if $Room == 1 %>
-                                        <h4 class="center">Room $Room: Design/Frontend</h4>
-									<% else_if $Room == 2 %>
-                                        <h4 class="center">Room $Room: Devops</h4>
-									<% else_if $Room == 3 %>
-                                        <h4 class="center">Room $Room: Yesterday talks demo</h4>
-									<% end_if %>
+                                       <h4 class="center">$Start</h4>
 									<% loop $Children %>
 										<% include TalkItem %>
 									<% end_loop %>
