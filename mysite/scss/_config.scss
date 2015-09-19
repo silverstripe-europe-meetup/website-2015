@@ -53,7 +53,7 @@ $ie-8-support: false;
 $breakpoint-small: 400px;
 $breakpoint-medium: 600px;
 
-$section-gutter: 60px;
+$section-gutter: 60px 0;
 $container-width: 870px;
 
 @include breakpoint-set('no query fallbacks', true);
