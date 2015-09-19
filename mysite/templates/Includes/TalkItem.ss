@@ -7,10 +7,6 @@
 		$Start.Format('H:i')<br/>
         -<br/>
 		$End.Format('H:i')
-		<% if $Room %>
-            <br/>
-			$Room
-		<% end_if %>
     </div>
     <div class="content">
         <strong>$Title</strong><br/>

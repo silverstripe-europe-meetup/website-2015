@@ -12,7 +12,7 @@
  * @property string Title
  * @property string Speaker
  * @property string Content
- * @property string Room
+ * @property int Room
  * @property string Day
  * @property string Start
  * @property string End
@@ -27,7 +27,7 @@ class Talk extends DataObject
 		'Title'   => 'Varchar(255)',
 		'Speaker' => 'Varchar(255)',
 		'Content' => 'HTMLText',
-		'Room'    => 'Varchar(255)',
+		'Room'    => 'Int',
 		'Day'     => 'Enum("Thu,Fri,Sat")',
 		'Start'   => 'Time',
 		'End'     => 'Time',
@@ -45,5 +45,21 @@ class Talk extends DataObject
 		'End'
 	);
 
+	public static $rooms = array(
+		0 => '',
+		1 => 'Design/frontend',
+		2 => 'Devops',
+		3 => 'Yesterday talks'
+	);
+
 	private static $default_sort = 'Day, Start ASC';
+
+	public function getCMSFields()
+	{
+		/** @var FieldList $fields */
+		$fields = parent::getCMSFields();
+		$fields->removeByName('Room');
+		$fields->addFieldToTab('Root.Main', DropdownField::create('Room', 'Room', self::$rooms));
+		return $fields;
+	}
 }
