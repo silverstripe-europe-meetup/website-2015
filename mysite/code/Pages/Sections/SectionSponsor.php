@@ -42,6 +42,6 @@ class SectionSponsor extends SectionBase
 
 	public function Sponsors($type = '')
 	{
-		return Sponsor::get()->filter(array('Type' => $type));
+		return Sponsor::get()->filter(array('Type' => $type))->sort('RAND()');
 	}
 }
