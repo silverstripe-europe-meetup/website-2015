@@ -38,10 +38,20 @@ class SectionSchedule extends SectionBase
 	public function talks($day)
 	{
 		$talks = Talk::get()->filter(array('Day' => $day))->sort('Start ASC');
-		if($day === 'Sat') {
+		if ($day === 'Sat') {
 			$talks = GroupedList::create($talks->sort('Start ASC, Room ASC'));
 		}
 		return $talks;
+	}
+
+	public function isActive($day)
+	{
+		if ($day === 'Fri' && date('Y-m-d') <= '2015-10-16') {
+			return 'active';
+		} elseif ($day === 'Sat' && date('Y-m-d') > '2015-10-16') {
+			return 'active';
+		}
+		return false;
 	}
 
 }

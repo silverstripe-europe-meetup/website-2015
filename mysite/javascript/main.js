@@ -174,7 +174,15 @@
 })(jQuery);
 
 $(".tab_content").hide();
-$(".tab_content:first").show();
+if($('ul.tabs').is(':visible')) {
+	var activeTab = $("ul.tabs li.active").attr("rel");
+	$('#'+activeTab).fadeIn();
+}
+else {
+	var activeDrawer = $('.d_active.tab_drawer_heading').attr('rel');
+	$('#'+activeDrawer).fadeIn();
+}
+
 
 /* if in tab mode */
 $("ul.tabs li").click(function () {
