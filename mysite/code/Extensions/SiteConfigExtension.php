@@ -6,6 +6,8 @@
  * StartGeneratedWithDataObjectAnnotator
  * @property string FooterContentLeft
  * @property string FooterContentRight
+ * @property int LogoID
+ * @method Image Logo
  * EndGeneratedWithDataObjectAnnotator
  */
 class mysiteSiteConfigExtension extends \DataExtension
@@ -15,11 +17,16 @@ class mysiteSiteConfigExtension extends \DataExtension
 		'FooterContentRight' => 'HTMLText',
 	];
 
+	private static $has_one = array(
+		'Logo' => 'Image',
+	);
+
 	/**
 	 * @param \FieldList $fields
 	 */
 	public function updateCMSFields(\FieldList $fields)
 	{
+		$fields->addFieldToTab('Root.Main', UploadField::create('Logo'));
 		$fields->removeByName('Theme');
 		$fields->addFieldsToTab('Root', [
 			new Tab('Footer', _t('SiteConfig.FooterTab', 'Footer')),

@@ -3,7 +3,7 @@
     <header>
         <nav class="container">
             <a href="#top" class="logo scroll">
-                <h1>$SiteConfig.Title</h1>
+                <h1 <% if $SiteConfig.Logo %>style='background-image:url("$SiteConfig.Logo.SetRatioSize(176,50).URL")'<% end_if %>>$SiteConfig.Title</h1>
             </a>
             <button class="toggle-nav"><span></span></button>
             <ul class="navigation">
