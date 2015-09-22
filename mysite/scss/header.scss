@@ -4,7 +4,7 @@ header {
 	background: $color-blue-dark;
 	position: relative;
 	z-index: 450;
-	padding: 10px $section-gutter;
+	padding: 10px;
 	@include susy-clearfix;
 
 	a {
@@ -92,7 +92,6 @@ header {
 		right: 0;
 		left: 0;
 		top: 0;
-		padding: 10px;
 		.toggle-nav {
 			display: none;
 		}
