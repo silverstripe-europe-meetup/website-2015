@@ -20,7 +20,7 @@ header {
 			display: block;
 			@include hide-text(right);
 			height: 50px;
-			background: left center no-repeat image-url('logo.png');
+			background: left center no-repeat image-url('stripecon-logo-web.png');
 			@include background-size(contain);
 		}
 	}
@@ -73,8 +73,7 @@ header {
 			padding: 10px;
 
 			a {
-				color: $color-blue-light;
-
+				color: $color-pink;
 				&:hover {
 					color: darken($color-blue-light, 10%);
 					text-decoration: none;
@@ -93,7 +92,7 @@ header {
 		right: 0;
 		left: 0;
 		top: 0;
-
+		padding: 10px;
 		.toggle-nav {
 			display: none;
 		}
