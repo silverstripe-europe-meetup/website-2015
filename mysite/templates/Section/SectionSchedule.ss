@@ -10,15 +10,15 @@
                     </div>
                     <ul class="tabs">
                         <li class="spacer big-spacer"></li>
-                        <li rel="tab1">Thursday</li>
+                        <li data-target="tab1">Thursday</li>
                         <li class="spacer"></li>
-                        <li class="$isActive('Fri')" rel="tab2">Friday</li>
+                        <li class="$isActive('Fri')" data-target="tab2">Friday</li>
                         <li class="spacer"></li>
-                        <li class="$isActive('Sat')" rel="tab3">Saturday</li>
+                        <li class="$isActive('Sat')" data-target="tab3">Saturday</li>
                         <li class="spacer big-spacer last"></li>
                     </ul>
                     <div class="tab_container">
-                        <h4 class="tab_drawer_heading" rel="tab1">Thursday</h4>
+                        <h3 class="tab_drawer_heading" data-target="tab1">Thursday</h3>
 
                         <div id="tab1" class="tab_content">
 							<% if $Talks('Thu').count %>
@@ -27,7 +27,7 @@
 								<% end_loop %>
 							<% end_if %>
                         </div>
-						<h3 class="<% if $isActive('Fri') %>d_active <% end_if %>tab_drawer_heading" rel="tab2">Friday</h3>
+						<h3 class="<% if $isActive('Fri') %>d_active <% end_if %>tab_drawer_heading" data-target="tab2">Friday</h3>
 
                         <div id="tab2" class="tab_content">
 							<% if $Talks('Fri').count %>
@@ -37,7 +37,7 @@
 							<% end_if %>
                         </div>
 
-                        <h3 class="<% if $isActive('Sat') %>d_active <% end_if %>tab_drawer_heading" rel="tab3">Saturday</h3>
+                        <h3 class="<% if $isActive('Sat') %>d_active <% end_if %>tab_drawer_heading" data-target="tab3">Saturday</h3>
 
                         <div id="tab3" class="tab_content">
 							<% if $Talks('Sat').count %>

@@ -4,7 +4,7 @@ header {
 	background: $color-blue-dark;
 	position: relative;
 	z-index: 450;
-	padding: 10px $section-gutter;
+	padding: 10px;
 	@include susy-clearfix;
 
 	a {
@@ -14,14 +14,13 @@ header {
 		display: block;
 		float: left;
 		width: 176px;
-
 		h1 {
 			margin: 0;
 			padding: 0;
 			display: block;
 			@include hide-text(right);
 			height: 50px;
-			background: left center no-repeat image-url('logo.png');
+			background: left center no-repeat image-url('stripecon-logo-web.png');
 			@include background-size(contain);
 		}
 	}
@@ -74,12 +73,7 @@ header {
 			padding: 10px;
 
 			a {
-				color: $color-blue-light;
-
-				&:hover {
-					color: darken($color-blue-light, 10%);
-					text-decoration: none;
-				}
+				color: $color-pink;
 			}
 		}
 	}
@@ -94,7 +88,6 @@ header {
 		right: 0;
 		left: 0;
 		top: 0;
-
 		.toggle-nav {
 			display: none;
 		}

@@ -104,8 +104,9 @@
 		.tab_drawer_heading {
 			background-color: $color-blue-light;
 			color: #FFF;
+			border-radius: 15px;
 			margin: 0;
-			padding: 5px 0 5px 5px;
+			padding: 5px 0 5px 15px;
 			display: block;
 			cursor: pointer;
 			-webkit-touch-callout: none;
@@ -125,6 +126,30 @@
 		}
 		#section-schedule .tab_content {
 			padding: 5px;
+		}
+
+	}
+}
+
+@media (max-width:640px) {
+	#section-schedule
+	{
+		.tab_content {
+			padding: 15px 0;
+		}
+		.talk-item {
+			top: 0;
+			height: auto;
+			padding: 0;
+			.impression {
+				@include span(3 of 12);
+			}
+			.time {
+				@include span(2 of 12);
+			}
+			.content {
+				@include span(7 of 12 last);
+			}
 		}
 
 	}
