@@ -191,15 +191,17 @@ else {
 /* if in tab mode */
 $("ul.tabs li").click(function () {
 
-	$(".tab_content").hide();
 	var activeTab = $(this).data("target");
-	$("#" + activeTab).fadeIn();
+	if(!$(this).hasClass('active')) {
+		$(".tab_content").hide();
+		$("#" + activeTab).fadeIn();
 
-	$("ul.tabs li").removeClass("active");
-	$(this).addClass("active");
+		$("ul.tabs li").removeClass("active");
+		$(this).addClass("active");
 
-	$(".tab_drawer_heading").removeClass("d_active");
-	$(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
+		$(".tab_drawer_heading").removeClass("d_active");
+		$(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
+	}
 });
 /* if in drawer mode */
 $(".tab_drawer_heading").click(function () {
