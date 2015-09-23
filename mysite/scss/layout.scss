@@ -121,22 +121,6 @@
 			@include background-size(cover);
 			position: relative;
 
-			//&:before, &:after {
-			//	display: block;
-			//	content: '';
-			//	position: absolute;
-			//	left: 0;
-			//	right: 0;
-			//	height: 5px;
-			//	background: #FFF repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba($color-grey-dark, .3) 5px, rgba($color-grey-dark, .3) 7px);
-			//}
-			//&:before {
-			//	top: -5px;
-			//}
-			//&:after {
-			//	bottom: -5px;
-			//}
-
 			.background-overlay {
 				position: absolute;
 				top: 0;
@@ -145,7 +129,7 @@
 				left: 0;
 
 				&.background-blue {
-					background: rgba($color-blue, .5);
+					background: rgba($color-blue, .4);
 				}
 			}
 		}
@@ -159,10 +143,15 @@
 
 @media (max-width:480px) {
 	.section .section-inner {
-		padding: 10px 15px;
+		padding: 15px 15px;
 		&.section-size-medium {
 			height: 275px;
 		}
 	}
 }
 
+@media (min-width:481px) and (max-width:768px) {
+	.section .section-inner {
+		padding: 60px 15px !important;
+	}
+}

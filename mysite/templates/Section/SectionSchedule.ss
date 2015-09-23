@@ -18,7 +18,7 @@
                         <li class="spacer big-spacer last"></li>
                     </ul>
                     <div class="tab_container">
-                        <h4 class="tab_drawer_heading" data-target="tab1">Thursday</h4>
+                        <h3 class="tab_drawer_heading" data-target="tab1">Thursday</h3>
 
                         <div id="tab1" class="tab_content">
 							<% if $Talks('Thu').count %>
