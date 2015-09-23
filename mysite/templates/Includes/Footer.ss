@@ -3,7 +3,7 @@
         <div class="container footer-top">
             <div class="left-column">
                 <a href="#top" class="logo scroll">
-                    <img src="$ThemeDir/images/logo.png" alt=""/>
+                    <img src="$ThemeDir/images/stripecon-logo-web.png" alt=""/>
                 </a>
             </div>
             <div class="right-column">

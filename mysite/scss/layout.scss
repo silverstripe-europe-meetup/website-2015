@@ -143,9 +143,14 @@
 
 @media (max-width:480px) {
 	.section .section-inner {
-		padding: 15px 15px;
+		padding: 25px 15px;
 		&.section-size-medium {
 			height: 275px;
+		}
+	}
+	#section-header.section {
+		.section-inner {
+			padding: 0 15px;
 		}
 	}
 }

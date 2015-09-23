@@ -132,7 +132,25 @@
 }
 
 @media (max-width:640px) {
-	#section .talk-item {
-		height: 190px; // It can't be set dynamically :'(
+	#section-schedule
+	{
+		.tab_content {
+			padding: 15px 0;
+		}
+		.talk-item {
+			top: 0;
+			height: auto;
+			padding: 0;
+			.impression {
+				@include span(3 of 12);
+			}
+			.time {
+				@include span(2 of 12);
+			}
+			.content {
+				@include span(7 of 12 last);
+			}
+		}
+
 	}
 }
