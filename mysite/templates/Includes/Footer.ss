@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="right-column">
-				$SiteConfig.Tagline
+				$SiteConfig.Tagline<div class="social"><a href="https://www.facebook.com/SilverStripeEU" target="_blank"><i class="fa fa-facebook" title="Facebook"></i></a><a href="https://twitter.com/SilverStripeEU" target="_blank"><i class="fa fa-twitter" title="Twitter"></i></a></div>
             </div>
         </div>
         <div class="container footer-main">

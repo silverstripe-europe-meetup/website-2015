@@ -11,6 +11,7 @@
     <link rel="apple-touch-icon-precomposed" href="{$BaseURL}favicon-152.png">
     <meta name="msapplication-TileImage" content="{$BaseURL}favicon-144.png">
     <meta name="msapplication-TileColor" content="#132136">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="page-container">
