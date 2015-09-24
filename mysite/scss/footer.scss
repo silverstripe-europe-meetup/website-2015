@@ -29,6 +29,13 @@ footer {
 		.right-column {
 			text-align: right;
 			display: none;
+			.social {
+				float: right;
+				a {
+					padding: 0 0 0 15px;
+					color: #FFF;
+				}
+			}
 		}
 	}
 	.footer-main {
