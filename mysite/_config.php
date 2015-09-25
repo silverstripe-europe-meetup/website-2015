@@ -11,8 +11,13 @@ i18n::set_locale('en_US');
 
 define('PROJECT_THIRDPARTY_DIR', project() . '/thirdparty');
 define('PROJECT_THIRDPARTY_PATH', BASE_PATH . '/' . PROJECT_THIRDPARTY_DIR);
+if (strpos(Director::absoluteBaseURL(), 'localhost') === false ||
+	(!Director::isLive() && (strpos(Director::absoluteBaseURL(), 'test') !== false))) {
+	BasicAuth::protect_entire_site(true);
+}
 if (Director::isLive()) {
-	if(strpos(Director::absoluteBaseURL(), 'silverstripe-europe.org') !== false || strpos(Director::absoluteBaseURL(), 'www') !== false) {
+	if (strpos(Director::absoluteBaseURL(), 'silverstripe-europe.org') !== false ||
+		strpos(Director::absoluteBaseURL(), 'www') !== false) {
 		$response = new SS_HTTPResponse();
 		$response->redirect('https://stripecon.eu', 301);
 
