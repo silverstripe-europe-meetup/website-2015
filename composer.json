@@ -5,7 +5,7 @@
 		"php": ">=5.4",
 		"silverstripe/cms": "^3.1@stable",
 		"silverstripe/framework": "^3.1@stable",
-		"silverstripe/googlesitemaps": "*",
+		"silverstripe/googlesitemaps": "dev-master",
 		"lrc/silverstripe-link-field": "*",
 		"zauberfisch/silverstripe-better-form-validator": "*",
 		"zauberfisch/silverstripe-better-requirements": "*",
