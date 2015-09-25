@@ -27,7 +27,7 @@
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
         (function () {
-            var u = "//piwik.silverstripe-europe.org/";
+            var u = "//piwik.stripecon.eu/";
             _paq.push(['setTrackerUrl', u + 'piwik.php']);
             _paq.push(['setSiteId', 4]);
             var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
@@ -38,7 +38,7 @@
             s.parentNode.insertBefore(g, s);
         })();
     </script>
-    <noscript><p><img src="//piwik.silverstripe-europe.org/piwik.php?idsite=4" style="border:0;" alt=""/></p></noscript>
+    <noscript><p><img src="//piwik.stripecon.eu/piwik.php?idsite=4" style="border:0;" alt=""/></p></noscript>
 	<% end_if %>
 </body>
 </html>
