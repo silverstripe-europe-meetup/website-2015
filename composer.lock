@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "687693c5de181c0de594787fc3923834",
+    "hash": "3ee4c6150c6fcc09e2f9287c21bfd9c4",
     "packages": [
         {
             "name": "axyr/silverstripe-ideannotator",
@@ -263,12 +263,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-australia/silverstripe-gridfieldextensions.git",
-                "reference": "381c6044ee1dd358df6c5b4f67757b8420288d07"
+                "reference": "4c1399ac5c983466fb72c2d9dc58042a07d4b91b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-gridfieldextensions/zipball/381c6044ee1dd358df6c5b4f67757b8420288d07",
-                "reference": "381c6044ee1dd358df6c5b4f67757b8420288d07",
+                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-gridfieldextensions/zipball/4c1399ac5c983466fb72c2d9dc58042a07d4b91b",
+                "reference": "4c1399ac5c983466fb72c2d9dc58042a07d4b91b",
                 "shasum": ""
             },
             "require": {
@@ -308,7 +308,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2015-09-15 00:09:13"
+            "time": "2015-09-24 00:04:49"
         },
         {
             "name": "silverstripe/cms",
@@ -449,12 +449,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "fc18e378d05c6b81bcac39338bf334e053186efa"
+                "reference": "027198e3e5c1ae767be46fdde12610baac621b53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/fc18e378d05c6b81bcac39338bf334e053186efa",
-                "reference": "fc18e378d05c6b81bcac39338bf334e053186efa",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/027198e3e5c1ae767be46fdde12610baac621b53",
+                "reference": "027198e3e5c1ae767be46fdde12610baac621b53",
                 "shasum": ""
             },
             "require": {
@@ -490,7 +490,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2015-08-27 06:53:13"
+            "time": "2015-09-19 19:59:50"
         },
         {
             "name": "symfony/yaml",
@@ -1157,7 +1157,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "silverstripe/cms": 0,
-        "silverstripe/framework": 0
+        "silverstripe/framework": 0,
+        "silverstripe/googlesitemaps": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
