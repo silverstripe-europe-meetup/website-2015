@@ -78,28 +78,29 @@ header {
 		}
 	}
 }
-
-@include breakpoint-with-fallback(700px) {
-	.header-push {
-		height: 60px;
-	}
-	header {
-		position: fixed;
-		right: 0;
-		left: 0;
-		top: 0;
-		.toggle-nav {
-			display: none;
+.page-container {
+	@include breakpoint-with-fallback(700px) {
+		.header-push {
+			height: 60px;
 		}
-		ul.navigation {
-			display: block !important;
-			text-align: right;
-			margin: 0 0 0 190px;
-			clear: none;
+		header {
+			position: fixed;
+			right: 0;
+			left: 0;
+			top: 0;
+			.toggle-nav {
+				display: none;
+			}
+			ul.navigation {
+				display: block !important;
+				text-align: right;
+				margin: 0 0 0 190px;
+				clear: none;
 
-			li {
-				display: inline-block;
-				padding: 5px;
+				li {
+					display: inline-block;
+					padding: 5px;
+				}
 			}
 		}
 	}
