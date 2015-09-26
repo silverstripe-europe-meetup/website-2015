@@ -11,8 +11,7 @@ i18n::set_locale('en_US');
 
 define('PROJECT_THIRDPARTY_DIR', project() . '/thirdparty');
 define('PROJECT_THIRDPARTY_PATH', BASE_PATH . '/' . PROJECT_THIRDPARTY_DIR);
-if (strpos(Director::absoluteBaseURL(), 'localhost') === false ||
-	(!Director::isLive() && (strpos(Director::absoluteBaseURL(), 'test') !== false))) {
+if (SS_IS_TEST_ENV) {
 	BasicAuth::protect_entire_site(true);
 }
 if (Director::isLive()) {
