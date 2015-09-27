@@ -1,8 +1,8 @@
 <!doctype html>
-<html class="no-js" lang="$ContentLocale">
+<html class="no-js" lang="$ContentLocale" itemscope itemtype="http://schema.org/BusinessEvent">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title><% if $URLSegment != 'home' %>$Title &raquo; <% end_if %>$SiteConfig.Title <% if $SiteConfig.Tagline %>
+    <title itemprop="alternateName"><% if $URLSegment != 'home' %>$Title &raquo; <% end_if %>$SiteConfig.Title <% if $SiteConfig.Tagline %>
         | $SiteConfig.Tagline<% end_if %></title>
 	<% base_tag %>
     <meta name="viewport" content="width=device-width"/>
@@ -11,13 +11,13 @@
     <link rel="apple-touch-icon-precomposed" href="{$BaseURL}favicon-152.png">
     <meta name="msapplication-TileImage" content="{$BaseURL}favicon-144.png">
     <meta name="msapplication-TileColor" content="#132136">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-</head>
-<body>
-<div class="page-container" itemscope itemtype="http://schema.org/BusinessEvent">
     <meta itemprop="startDate" content="2015-10-15">
     <meta itemprop="endDate" content="2015-10-17">
     <meta itemprop="doorTime" content="09:00:00">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="page-container">
 	<% include Header %>
     <div class="layout" role="main">
 		$Layout
