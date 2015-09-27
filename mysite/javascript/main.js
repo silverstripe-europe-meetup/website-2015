@@ -1,3 +1,4 @@
+var _paq = _paq || [];
 (function ($) {
 	$('a.scroll, .typography a').entwine({
 		onclick: function () {
@@ -6,7 +7,11 @@
 				$('html, body').animate({
 					scrollTop: target.offset().top - 70
 				}, 700);
+				_paq.push(['trackEvent', 'Scroll', 'Section', this.attr('title')]);
 				return false;
+			}
+			else {
+				_paq.push(['trackEvent', 'Link', 'External', this.attr('href')]);
 			}
 		}
 	});
@@ -168,8 +173,13 @@
 			});
 			google.maps.event.addListener(marker, 'click', function () {
 				infowindow.open(map, marker);
+				_paq.push(['trackEvent', 'Location', 'Infowindow', 'Open']);
 			});
 		}
+	});
+	/** Quick and dirty Piwik tracking of events */
+	$('form').on('submit', function () {
+		_paq.push(['trackEvent', 'Contactform', $('#Form_ContactForm_Receiver').val(), $('#Form_ContactForm_Subject').val()]);
 	});
 })(jQuery);
 
@@ -181,6 +191,7 @@ if ($('ul.tabs').is(':visible')) {
 else {
 	var activeDrawer = $('.d_active.tab_drawer_heading').data('target');
 	$('#' + activeDrawer).fadeIn();
+	/** Recalculate the height of the items */
 	$.each($('.talk-item:visible'), function () {
 		$(this).css('height', $(this).outerHeight() + 50);
 		$(this).addClass('has-height');
@@ -224,16 +235,3 @@ $(".tab_drawer_heading").click(function () {
 		scrollTop: ($('#section-schedule').offset().top)
 	}, 1000);
 });
-
-(function ($) {
-	var _paq = _paq || [];
-	$('.scroll', 'header .navigation').on('click', function () {
-		_paq.push(['trackEvent', 'Scroll', 'Section', $(this).attr('title')]);
-	});
-	$('a').not('.scroll').on('click', function () {
-		_paq.push(['trackEvent', 'Link', $(this).attr('_target'), $(this).attr('title')]);
-	});
-	$('form').on('submit', function () {
-		_paq.push(['trackEvent', 'Contactform', $('#Form_ContactForm_Receiver').val(), $('#Form_ContactForm_Subject').val()]);
-	});
-})(jQuery);
