@@ -123,7 +123,5 @@ class Page_Controller extends \ContentController
 	public function onAfterWrite()
 	{
 		parent::onAfterWrite();
-
-
 	}
 }
