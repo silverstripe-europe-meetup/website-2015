@@ -94,9 +94,7 @@ class Page_Controller extends \ContentController
 	{
 		Requirements::javascript('https://maps.googleapis.com/maps/api/js');
 		Requirements::combine_files('main.js', [
-			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery/dist/jquery.min.js',
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery.entwine/dist/jquery.entwine-dist.js',
-			PROJECT_THIRDPARTY_DIR . '/composer-bower/magnific-popup/dist/jquery.magnific-popup.min.js',
 			project() . '/javascript/plugins.js',
 			project() . '/javascript/timer.js',
 			project() . '/javascript/main.js',
