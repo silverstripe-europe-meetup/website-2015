@@ -3,7 +3,7 @@
     <header>
         <nav class="container">
             <a href="#top" class="logo scroll">
-                <h1>$SiteConfig.Title</h1>
+                <h1 itemprop="name" content="$SiteConfig.Title">$SiteConfig.Title</h1>
             </a>
             <button class="toggle-nav"><span></span></button>
             <ul class="navigation">

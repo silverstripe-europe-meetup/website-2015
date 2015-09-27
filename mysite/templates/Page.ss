@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
-<div class="page-container">
+<div class="page-container" itemscope itemtype="http://schema.org/BusinessEvent">
+    <meta itemprop="startDate" content="2015-10-15">
+    <meta itemprop="endDate" content="2015-10-17">
+    <meta itemprop="doorTime" content="09:00:00">
 	<% include Header %>
     <div class="layout" role="main">
 		$Layout

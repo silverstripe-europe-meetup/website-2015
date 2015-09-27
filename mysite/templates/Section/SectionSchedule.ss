@@ -1,5 +1,5 @@
 <% cached $URLSegment %>
-    <div class="background background-$BackgroundColor">
+    <div class="background background-$BackgroundColor" itemscope="" itemtype="http://schema.org/subEvents">
         <div class="section-inner-container">
             <div class="section-inner section-talks">
                 <div class="content typography">
