@@ -20,3 +20,14 @@
         </div>
     </footer>
 <% end_cached %>
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "$SiteConfig.Title",
+  "url" : "https://stripecon.eu",
+  "email" : "info@silverstripe-europe.org",
+  "logo": "https://stripecon.eu/$ThemeDir/images/stripecon-logo-web.png",
+  "sameAs" : [ "https://www.facebook.com/StripeConEU",
+    "https://twitter.com/StripeConEU"]
+}
+</script>
