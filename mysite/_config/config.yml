@@ -14,7 +14,7 @@ SSViewer:
 MySQLDatabase:
   connection_charset: 'utf8'
 GDBackend:
-  default_quality: 100
+  default_quality: 75
 SiteTree:
   nested_urls: true
   # Disable creating of default pages (like home) on /dev/build
