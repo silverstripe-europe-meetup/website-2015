@@ -1,18 +1,34 @@
-<div class="$EvenOdd talk-item">
-    <div class="center impression" Title="$Title">
-		$Impression.SetRatioSize(100,100)<br/>
-        <i>$Speaker</i>
+<div class="$EvenOdd talk-item" itemscope itemtype="http://schema.org/Event">
+    <div <% if $Speaker %>itemprop="performer" itemscope="" itemtype="http://schema.org/Person"<% end_if %> class="center impression" Title="$Title">
+		<span itemprop="image">$Impression.SetRatioSize(100,100)</span><br/>
+		<% if $Speaker %><i itemprop="name">$Speaker</i><% end_if %>
     </div>
     <div class="center time">
-		$Start.Format('H:i')<br/>
+		<span itemprop="startDate" content="2015-10-<% if $Day == 'Thu' %>15T<% else_if $Day == 'Fri' %>16T<% else %>17T<% end_if %>{$Start.Format('H:i:s')}">$Start.Format('H:i')</span><br/>
         -<br/>
-		$End.Format('H:i')
+        <span itemprop="endDate" content="2015-10-<% if $Day == 'Thu' %>15T<% else_if $Day == 'Fri' %>16T<% else %>17T<% end_if %>$End.Format('H:i')">$End.Format('H:i')</span><br/>
     </div>
     <div class="content">
 		<% if $Room %>
-            <i>Room $Room: $roomName</i><br />
+            <i itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+				<span itemprop="name">Room $Room: $roomName</span>
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<meta itemprop="streetAddress" content="1 St Katharine's Way">
+					<meta itemprop="addressLocality" content="London" />
+					<meta itemprop="postalCode" content="E1W 1UN">
+				</span>
+			</i>
+		<% else %>
+			<span itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+				<meta itemprop="name" content="Central conference room" />
+				<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<meta itemprop="streetAddress" content="1 St Katharine's Way">
+					<meta itemprop="addressLocality" content="London" />
+					<meta itemprop="postalCode" content="E1W 1UN">
+				</span>
+			</span>
 		<% end_if %>
-        <strong>$Title</strong><br/>
+        <strong itemprop="name">$Title</strong><br/>
 		$Content
     </div>
 </div>
