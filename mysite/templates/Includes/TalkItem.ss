@@ -17,7 +17,7 @@
 					<meta itemprop="addressLocality" content="London" />
 					<meta itemprop="postalCode" content="E1W 1UN">
 				</span>
-			</i>
+			</i><br />
 		<% else %>
 			<span itemprop="location" itemscope="" itemtype="http://schema.org/Place">
 				<meta itemprop="name" content="Central conference room" />
