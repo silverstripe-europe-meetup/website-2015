@@ -1,5 +1,14 @@
 <% cached $URLSegment %>
-    <div class="background background-$BackgroundColor" itemscope="" itemtype="http://schema.org/subEvents">
+    <div class="background background-$BackgroundColor"  itemscope="" itemprop="subEvents" itemtype="http://schema.org/Event">
+		<meta itemprop="startDate" content="2015-10-16" />
+        <span itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+        <span itemprop="name">Room $Room: $roomName</span>
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<meta itemprop="streetAddress" content="1 St Katharine's Way">
+					<meta itemprop="addressLocality" content="London" />
+					<meta itemprop="postalCode" content="E1W 1UN">
+				</span>
+		</span>
         <div class="section-inner-container">
             <div class="section-inner section-talks">
                 <div class="content typography">
@@ -10,7 +19,7 @@
                     </div>
                     <ul class="tabs">
                         <li class="spacer big-spacer"></li>
-                        <li data-target="tab1">Thursday</li>
+                        <li data-target="tab1" itemprop="name">Thursday</li>
                         <li class="spacer"></li>
                         <li class="$isActive('Fri')" data-target="tab2">Friday</li>
                         <li class="spacer"></li>
@@ -18,7 +27,7 @@
                         <li class="spacer big-spacer last"></li>
                     </ul>
                     <div class="tab_container">
-                        <h3 class="tab_drawer_heading" data-target="tab1">Thursday</h3>
+                        <h3 class="tab_drawer_heading" itemprop="name" data-target="tab1">Thursday</h3>
 
                         <div id="tab1" class="tab_content">
 							<% if $Talks('Thu').count %>
