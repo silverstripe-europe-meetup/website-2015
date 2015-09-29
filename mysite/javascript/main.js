@@ -177,10 +177,6 @@ var _paq = _paq || [];
 			});
 		}
 	});
-	/** Quick and dirty Piwik tracking of events */
-	$('form').on('submit', function () {
-		_paq.push(['trackEvent', 'Contactform', $('#Form_ContactForm_Receiver').val(), $('#Form_ContactForm_Subject').val()]);
-	});
 })(jQuery);
 
 $(".tab_content").hide();
@@ -234,4 +230,13 @@ $(".tab_drawer_heading").click(function () {
 	$('html, body').animate({
 		scrollTop: ($('#section-schedule').offset().top)
 	}, 1000);
+});
+
+/** Quick and dirty Piwik tracking of events */
+$('#Form_ContactForm_action_HandleForm').on('click', function (e) {
+	e.preventDefault();
+	_paq.push(['trackEvent', 'Contactform', $('#Form_ContactForm_Receiver').val(), $('#Form_ContactForm_Subject').val()]);
+	setTimeout(function() {
+		$('form').submit();
+	},100);
 });
