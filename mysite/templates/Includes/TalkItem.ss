@@ -1,10 +1,10 @@
-<div class="$EvenOdd talk-item" itemscope itemtype="http://schema.org/Event">
+<div class="$EvenOdd talk-item" itemscope itemprop="subEvent" itemtype="http://schema.org/Event">
     <div <% if $Speaker %>itemprop="performer" itemscope="" itemtype="http://schema.org/Person"<% end_if %> class="center impression" Title="$Title">
 		<span itemprop="image">$Impression.SetRatioSize(100,100)</span><br/>
 		<% if $Speaker %><i itemprop="name">$Speaker</i><% end_if %>
     </div>
     <div class="center time">
-		<span itemprop="startDate" content="2015-10-<% if $Day == 'Thu' %>15T<% else_if $Day == 'Fri' %>16T<% else %>17T<% end_if %>{$Start.Format('H:i:s')}">$Start.Format('H:i')</span><br/>
+		<span itemprop="startDate" content="2015-10-<% if $Day == 'Thu' %>15T<% else_if $Day == 'Fri' %>16T<% else %>17T<% end_if %>{$Start.Format('H:i')}">$Start.Format('H:i')</span><br/>
         -<br/>
         <span itemprop="endDate" content="2015-10-<% if $Day == 'Thu' %>15T<% else_if $Day == 'Fri' %>16T<% else %>17T<% end_if %>$End.Format('H:i')">$End.Format('H:i')</span><br/>
     </div>
