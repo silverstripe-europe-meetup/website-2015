@@ -2,7 +2,7 @@
     <div class="background background-$BackgroundColor"  itemscope="" itemprop="subEvents" itemtype="http://schema.org/Event">
 		<meta itemprop="startDate" content="2015-10-16" />
         <span itemprop="location" itemscope="" itemtype="http://schema.org/Place">
-        <span itemprop="name">Room $Room: $roomName</span>
+			<meta itemprop="name" content="Central conference room" />
                 <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 					<meta itemprop="streetAddress" content="1 St Katharine's Way">
 					<meta itemprop="addressLocality" content="London" />
