@@ -29,11 +29,6 @@ class SectionBase extends Page
 		return parent::canCreate($member);
 	}
 
-	public function canView($member = null)
-	{
-		return $this->isPublished();
-	}
-
 	protected function onBeforeWrite()
 	{
 		parent::onBeforeWrite();
