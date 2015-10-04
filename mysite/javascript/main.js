@@ -2,12 +2,14 @@ var _paq = _paq || [];
 (function ($) {
 	$('a.scroll, .typography a').entwine({
 		onclick: function () {
-			var target = $('#' + this.attr('href').split("#")[1]);
+			var hash = this.attr('href').split("#")[1];
+			var target = $('#' + hash);
 			if (target.length) {
 				$('html, body').animate({
 					scrollTop: target.offset().top - 70
 				}, 700);
 				_paq.push(['trackEvent', 'Scroll', 'Section', this.attr('title')]);
+				window.location.hash = '#' + hash;
 				return false;
 			}
 			else {
