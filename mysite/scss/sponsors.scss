@@ -12,15 +12,6 @@
 		height: 125px;
 	}
 	&.platinum, &.gold {
-		.content-left, .content-right {
-			display: table-cell;
-			vertical-align: middle;
-			position: relative;
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-		}
 		@include span(12);
 		.logo-left {
 			@include span(3 of 12);
@@ -41,15 +32,6 @@
 		height: 100px;
 	}
 	&.silver, &.bronze {
-		.content-left, .content-right {
-			display: table-cell;
-			vertical-align: middle;
-			position: relative;
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-		}
 		@include span(6);
 		&.even {
 			@include span(last);
@@ -71,5 +53,26 @@
 	}
 	&.principal {
 		margin-bottom: gutter();
+	}
+}
+
+@media (min-width:640px) {
+	.sponsor-item {
+		.content-left, .content-right {
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+	}
+}
+@media (max-width:640px) {
+	.sponsor-item {
+		&.platinum, &.gold, &.silver, &.bronze {
+			height: auto;
+		}
 	}
 }
