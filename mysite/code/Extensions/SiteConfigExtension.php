@@ -6,8 +6,6 @@
  * StartGeneratedWithDataObjectAnnotator
  * @property string FooterContentLeft
  * @property string FooterContentRight
- * @property int LogoID
- * @method Image Logo
  * EndGeneratedWithDataObjectAnnotator
  */
 class mysiteSiteConfigExtension extends \DataExtension
