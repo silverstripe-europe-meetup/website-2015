@@ -3,6 +3,8 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} www.(.*)$ [NC]
 RewriteRule ^(.*)$ https://stripecon.eu/$1 [R=301,L]
 
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+
 <IfModule mod_setenvif.c>
     <IfModule mod_headers.c>
         <FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp)$">
