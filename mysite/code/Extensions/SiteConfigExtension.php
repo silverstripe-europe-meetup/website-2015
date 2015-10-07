@@ -2,13 +2,13 @@
 
 /**
  * @author zauberfisch
- * @property \SiteConfig|mysiteSiteConfigExtension owner
+ * @property SiteConfig|mysiteSiteConfigExtension owner
  * StartGeneratedWithDataObjectAnnotator
  * @property string FooterContentLeft
  * @property string FooterContentRight
  * EndGeneratedWithDataObjectAnnotator
  */
-class mysiteSiteConfigExtension extends \DataExtension
+class mysiteSiteConfigExtension extends DataExtension
 {
 	private static $db = [
 		'FooterContentLeft'  => 'HTMLText',

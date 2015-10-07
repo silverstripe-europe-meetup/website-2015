@@ -25,6 +25,7 @@ class Page_Controller extends \ContentController
 {
 	private static $allowed_actions = array(
 		'ContactForm',
+		'getGallery',
 	);
 
 	public function init()
@@ -96,7 +97,9 @@ class Page_Controller extends \ContentController
 		Requirements::combine_files('main.js', [
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery.entwine/dist/jquery.entwine-dist.js',
 			project() . '/javascript/plugins.js',
+			project() . '/javascript/parallax.min.js',
 			project() . '/javascript/timer.js',
+			project() . '/javascript/gallery.js',
 			project() . '/javascript/main.js',
 		]);
 	}
@@ -115,9 +118,18 @@ class Page_Controller extends \ContentController
 			project() . '/scss/layout.scss',
 			project() . '/scss/sponsors.scss',
 			project() . '/scss/talk.scss',
+			project() . '/scss/gallery.scss',
 			project() . '/scss/editor.scss'
 		]);
 		Requirements::clear(project() . '/css/editor.css');
+	}
+
+
+	public function getGallery()
+	{
+		$galleryID = (int)$this->getRequest()->postVar('gallery');
+		$gallery = Gallery::get()->filter(array('ID' => $galleryID))->first();
+		return $this->renderWith('Gallery', $gallery);
 	}
 
 	public function onAfterWrite()

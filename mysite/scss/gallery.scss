@@ -1,0 +1,21 @@
+@import "config";
+
+.section {
+	&.section-type-SectionGallery {
+		.background-grey-light {
+			background: $color-grey-light;
+		}
+		.background-blue-dark {
+			background: $color-blue-dark;
+
+			.typography {
+				color: #FFF;
+			}
+		}
+		.section-inner {
+			.content {
+				margin: 0 0 -18px;
+			}
+		}
+	}
+}

@@ -4,57 +4,12 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ee4c6150c6fcc09e2f9287c21bfd9c4",
+    "hash": "75b71475923e387da64b4a88adeeca2f",
+    "content-hash": "e0ed05193b86469d52770f798b540bb1",
     "packages": [
         {
-            "name": "axyr/silverstripe-ideannotator",
-            "version": "dev-master",
-            "target-dir": "ideannotator",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/axyr/silverstripe-ideannotator.git",
-                "reference": "7506f167cd3feb8cd9e432c6d071bf34967b96d6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/axyr/silverstripe-ideannotator/zipball/7506f167cd3feb8cd9e432c6d071bf34967b96d6",
-                "reference": "7506f167cd3feb8cd9e432c6d071bf34967b96d6",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/framework": ">=3.1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7@stable"
-            },
-            "type": "silverstripe-module",
-            "extra": {
-                "installer-name": "ideannotator"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Martijn van Nieuwenhoven",
-                    "email": "info@axyrmedia.nl"
-                }
-            ],
-            "description": "Generate PHP DocBlock annotations for DataObject and DataExtension databasefields and relation methods",
-            "keywords": [
-                "annotations",
-                "database",
-                "docblock",
-                "ide",
-                "orm",
-                "silverstripe"
-            ],
-            "time": "2015-07-25 18:05:00"
-        },
-        {
             "name": "bummzack/sortablefile",
-            "version": "dev-master",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bummzack/sortablefile.git",
@@ -94,16 +49,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "dev-master",
+            "version": "v1.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41"
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41",
-                "reference": "e420b539e8d7b38b7c6f3f99dccc0386bd3dfe41",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
                 "shasum": ""
             },
             "replace": {
@@ -185,20 +140,20 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-06-13 15:30:38"
+            "time": "2015-02-18 17:17:01"
         },
         {
             "name": "heyday/silverstripe-colorpalette",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heyday/silverstripe-colorpalette.git",
-                "reference": "14a08abcc1dde7bb671873181e3c48f9c00f537a"
+                "reference": "96bb19e6f77915cc85bb461ebe69496b0439165c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heyday/silverstripe-colorpalette/zipball/14a08abcc1dde7bb671873181e3c48f9c00f537a",
-                "reference": "14a08abcc1dde7bb671873181e3c48f9c00f537a",
+                "url": "https://api.github.com/repos/heyday/silverstripe-colorpalette/zipball/96bb19e6f77915cc85bb461ebe69496b0439165c",
+                "reference": "96bb19e6f77915cc85bb461ebe69496b0439165c",
                 "shasum": ""
             },
             "type": "silverstripe-module",
@@ -217,11 +172,11 @@
                 }
             ],
             "description": "A coor palette picker for SilverStripe CMS",
-            "time": "2013-07-28 06:19:51"
+            "time": "2013-07-14 00:49:15"
         },
         {
             "name": "lrc/silverstripe-link-field",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lrc/silverstripe-link-field.git",
@@ -259,16 +214,16 @@
         },
         {
             "name": "silverstripe-australia/gridfieldextensions",
-            "version": "dev-master",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe-australia/silverstripe-gridfieldextensions.git",
-                "reference": "4c1399ac5c983466fb72c2d9dc58042a07d4b91b"
+                "reference": "48b0a1f3fca0f548744e6cd12b7754de323054d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-gridfieldextensions/zipball/4c1399ac5c983466fb72c2d9dc58042a07d4b91b",
-                "reference": "4c1399ac5c983466fb72c2d9dc58042a07d4b91b",
+                "url": "https://api.github.com/repos/silverstripe-australia/silverstripe-gridfieldextensions/zipball/48b0a1f3fca0f548744e6cd12b7754de323054d3",
+                "reference": "48b0a1f3fca0f548744e6cd12b7754de323054d3",
                 "shasum": ""
             },
             "require": {
@@ -303,12 +258,12 @@
                 }
             ],
             "description": "A collection of useful grid field components",
-            "homepage": "http://github.com/silverstripe-australia/silverstripe-gridfieldextensions",
+            "homepage": "http://github.com/ajshort/silverstripe-gridfieldextensions",
             "keywords": [
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2015-09-24 00:04:49"
+            "time": "2015-08-11 05:01:37"
         },
         {
             "name": "silverstripe/cms",
@@ -448,13 +403,13 @@
             "version": "2.8.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Process.git",
-                "reference": "027198e3e5c1ae767be46fdde12610baac621b53"
+                "url": "https://github.com/symfony/process.git",
+                "reference": "69d7a410cf97857296f62f662105db4101fabdc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/027198e3e5c1ae767be46fdde12610baac621b53",
-                "reference": "027198e3e5c1ae767be46fdde12610baac621b53",
+                "url": "https://api.github.com/repos/symfony/process/zipball/69d7a410cf97857296f62f662105db4101fabdc5",
+                "reference": "69d7a410cf97857296f62f662105db4101fabdc5",
                 "shasum": ""
             },
             "require": {
@@ -490,20 +445,20 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2015-09-19 19:59:50"
+            "time": "2015-10-06 17:12:59"
         },
         {
             "name": "symfony/yaml",
             "version": "2.8.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Yaml.git",
-                "reference": "d196cb1ac36901bde7d7fbed74ee31fdb85fd119"
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "36ddab7971364b20229155cd972631a2257d7dac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/d196cb1ac36901bde7d7fbed74ee31fdb85fd119",
-                "reference": "d196cb1ac36901bde7d7fbed74ee31fdb85fd119",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/36ddab7971364b20229155cd972631a2257d7dac",
+                "reference": "36ddab7971364b20229155cd972631a2257d7dac",
                 "shasum": ""
             },
             "require": {
@@ -539,20 +494,20 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-09-14 14:15:17"
+            "time": "2015-10-02 12:38:01"
         },
         {
             "name": "unclecheese/betterbuttons",
-            "version": "dev-master",
+            "version": "1.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-gridfield-betterbuttons.git",
-                "reference": "15fad37bc42ea50a6c57dc6a40ae66a28d81c028"
+                "reference": "b78f3c7449651ba2acefe4000f161e17384fcad3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/15fad37bc42ea50a6c57dc6a40ae66a28d81c028",
-                "reference": "15fad37bc42ea50a6c57dc6a40ae66a28d81c028",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/b78f3c7449651ba2acefe4000f161e17384fcad3",
+                "reference": "b78f3c7449651ba2acefe4000f161e17384fcad3",
                 "shasum": ""
             },
             "require": {
@@ -561,7 +516,7 @@
             "type": "silverstripe-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GNU"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -575,20 +530,20 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2015-06-17 03:38:55"
+            "time": "2015-02-09 02:07:59"
         },
         {
             "name": "unclecheese/display-logic",
-            "version": "dev-master",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-display-logic.git",
-                "reference": "369b7488b764c0447a6344628f06b3dcea8b1913"
+                "reference": "7f186c1405172958b2e8ed5e4322a04d8133ca69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-display-logic/zipball/369b7488b764c0447a6344628f06b3dcea8b1913",
-                "reference": "369b7488b764c0447a6344628f06b3dcea8b1913",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-display-logic/zipball/7f186c1405172958b2e8ed5e4322a04d8133ca69",
+                "reference": "7f186c1405172958b2e8ed5e4322a04d8133ca69",
                 "shasum": ""
             },
             "require": {
@@ -619,7 +574,7 @@
                 "logic",
                 "silverstripe"
             ],
-            "time": "2015-03-22 09:47:21"
+            "time": "2015-01-29 23:35:48"
         },
         {
             "name": "zauberfisch/silverstripe-better-form-validator",
@@ -783,8 +738,54 @@
     ],
     "packages-dev": [
         {
+            "name": "axyr/silverstripe-ideannotator",
+            "version": "dev-master",
+            "target-dir": "ideannotator",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/axyr/silverstripe-ideannotator.git",
+                "reference": "7506f167cd3feb8cd9e432c6d071bf34967b96d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/axyr/silverstripe-ideannotator/zipball/7506f167cd3feb8cd9e432c6d071bf34967b96d6",
+                "reference": "7506f167cd3feb8cd9e432c6d071bf34967b96d6",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": ">=3.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7@stable"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "ideannotator"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Martijn van Nieuwenhoven",
+                    "email": "info@axyrmedia.nl"
+                }
+            ],
+            "description": "Generate PHP DocBlock annotations for DataObject and DataExtension databasefields and relation methods",
+            "keywords": [
+                "annotations",
+                "database",
+                "docblock",
+                "ide",
+                "orm",
+                "silverstripe"
+            ],
+            "time": "2015-07-25 18:05:00"
+        },
+        {
             "name": "phpunit/php-code-coverage",
-            "version": "1.2.x-dev",
+            "version": "1.2.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
@@ -845,7 +846,7 @@
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "dev-master",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
@@ -1024,7 +1025,7 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "3.7.x-dev",
+            "version": "3.7.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
@@ -1097,34 +1098,26 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "1.2.x-dev",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "c39c4511c3b007539eb170c32cbc2af49a07351a"
+                "reference": "5794e3c5c5ba0fb037b11d8151add2a07fa82875"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/c39c4511c3b007539eb170c32cbc2af49a07351a",
-                "reference": "c39c4511c3b007539eb170c32cbc2af49a07351a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5794e3c5c5ba0fb037b11d8151add2a07fa82875",
+                "reference": "5794e3c5c5ba0fb037b11d8151add2a07fa82875",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
                 "phpunit/php-text-template": ">=1.1.1@stable"
             },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*@dev"
-            },
             "suggest": {
                 "ext-soap": "*"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev"
-                }
-            },
             "autoload": {
                 "classmap": [
                     "PHPUnit/"
@@ -1150,7 +1143,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2014-02-16 12:43:56"
+            "time": "2013-01-13 10:24:48"
         }
     ],
     "aliases": [],
@@ -1160,7 +1153,7 @@
         "silverstripe/framework": 0,
         "silverstripe/googlesitemaps": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.4"

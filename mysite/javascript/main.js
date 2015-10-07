@@ -210,6 +210,11 @@ $("ul.tabs li").click(function () {
 		_paq.push(['trackEvent', 'Schedule', 'Pill', $(this).html()]);
 		$(".tab_drawer_heading").removeClass("d_active");
 		$(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
+		$('html, body').animate({
+			scrollTop: ($('#section-schedule').offset().top - 70)
+		}, 1000).after(function() {
+			$(window).trigger('resize.px.parallax')
+		});
 	}
 });
 /* if in drawer mode */
@@ -231,7 +236,9 @@ $(".tab_drawer_heading").click(function () {
 	_paq.push(['trackEvent', 'Schedule', 'Drawer', $(this).html()]);
 	$('html, body').animate({
 		scrollTop: ($('#section-schedule').offset().top)
-	}, 1000);
+	}, 1000).after(function() {
+		$(window).trigger('resize.px.parallax')
+	});
 });
 
 /** Quick and dirty Piwik tracking of events */
