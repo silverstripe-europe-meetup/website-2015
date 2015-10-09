@@ -12,6 +12,18 @@
 				galleryItem.animate({
 					scrollTop: galleryItem.top - 70
 				}, 700);
+				$('#gallery-item .fancybox').fancybox({
+					helpers: {
+						title: {type: 'inside'},
+						thumbs	: {
+							width	: 50,
+							height	: 50
+						}
+					}
+				});
+			},
+			done: function() {
+					$(window).trigger('resize.px.parallax')
 			}
 		});
 		_paq.push(['trackEvent', 'Gallery', $(this).html(), hash]);

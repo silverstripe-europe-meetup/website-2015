@@ -2,6 +2,18 @@
 
 .section {
 	&.section-type-SectionGallery {
+		&.section-inner {
+			margin: gutter() 0;
+			a.gallery-item__specific {
+				width: 100px;
+				height: 100px;
+				padding: 0 15px;
+				display: inline-block;
+			}
+		}
+		img {
+			border-radius: 50%;
+		}
 		.background-grey-light {
 			background: $color-grey-light;
 		}
@@ -15,7 +27,20 @@
 		.section-inner {
 			.content {
 				margin: 0 0 -18px;
+				text-align: center;
 			}
 		}
+		.galleries {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	.gallery-featured {
+		width: 150px;
+		float: left;
+	}
+	#gallery-item {
+		margin: gutter();
+		display: none;
 	}
 }
