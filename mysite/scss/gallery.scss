@@ -4,6 +4,9 @@
 	&.section-type-SectionGallery {
 		&.section-inner {
 			margin: gutter() 0;
+			h3 {
+				height: 55px;
+			}
 			a.gallery-item__specific {
 				width: 100px;
 				height: 100px;
