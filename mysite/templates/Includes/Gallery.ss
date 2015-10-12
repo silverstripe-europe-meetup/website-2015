@@ -1,3 +1,4 @@
+<h4>$Title</h4>
 <a class="fancybox" href="$CoverImage.Link" data-fancybox-group="$Title"
    title="$CoverImage.Title">$CoverImage.CroppedImage(70,70,"232730")</a>
 <% loop $Images %>
