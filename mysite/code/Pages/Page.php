@@ -119,6 +119,7 @@ class Page_Controller extends \ContentController
 			project() . '/scss/sponsors.scss',
 			project() . '/scss/talk.scss',
 			project() . '/scss/jquery.fancybox.scss',
+			project() . '/scss/jquery.fancybox-thumbs.scss',
 			project() . '/scss/gallery.scss',
 			project() . '/scss/editor.scss'
 		]);
