@@ -15,7 +15,7 @@
                                 <div class="center $EvenOdd gallery-item">
                                     <a data-gallery="{$ID}" href="#section-gallery" Title="$Title"
                                        class="gallery-item__specific">
-                                        <img src="$CoverImage.CroppedImage(100,100,'232730').URL" alt="$Title"/>
+                                        <img src="$CoverImage.CroppedImage(120,120,'232730').URL" alt="$Title"/>
                                     </a>
                                 </div>
                             </div>
