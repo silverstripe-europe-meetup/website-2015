@@ -2,7 +2,10 @@ var loaderDiv = "<div class='loader'></div>";
 (function ($) {
 	var galleryCount = $('.gallery-featured').length;
 	$('.galleries').css('width', galleryCount * 160);
-	$('a.gallery-item__specific').on('click', function () {
+	$('a.gallery-item__specific').not('.active').on('click', function () {
+		var superParent = $(this).parent().parent();
+		$('.gallery-featured').not(superParent).removeClass('active').addClass('inactive');
+		superParent.removeClass('inactive').addClass('active');
 		var hash = $(this).data('gallery');
 		var galleryItem = $('#gallery-item');
 		if(galleryItem.children().length) {
