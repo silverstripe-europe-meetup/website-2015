@@ -79,16 +79,6 @@
 
 		margin-top: gutter();
 		a.fancybox {
-			.icon-zoom-in {
-				display: none;
-				position: absolute;
-				font-size: 2em;
-				width: 120px;
-				height: 120px;
-				top: 0;
-				left: 15px;
-				z-index: 998;
-			}
 			position: relative;
 			transition: all .2s ease-in-out;
 			display: inline-block;
@@ -98,9 +88,6 @@
 			padding: 0 15px;
 			&:hover {
 				transform: scale(1.2);
-				.icon-zoom-in {
-					display: block;
-				}
 			}
 			img {
 				width: 100px;
