@@ -1,29 +1,36 @@
 var loaderDiv = "<div class='loader'></div>";
 (function ($) {
-	var galleryCount = $('.gallery-featured').length;
+	/** Set the width of the container. Must be calculated */
+	var featured = $('.gallery-featured', '.galleries'),
+		galleryCount = featured.length,
+		galleryItem = $('#gallery-item');
 	$('.galleries').css('width', galleryCount * 160);
+
 	$('a.gallery-item__specific').not('.active').on('click', function () {
-		var superParent = $(this).parent().parent();
-		$('.gallery-featured').not(superParent).removeClass('active').addClass('inactive');
+		/** Select the items we want */
+		var superParent = $(this).parent().parent(),
+		    hash = $(this).data('gallery');
+
+		featured.not(superParent).removeClass('active').addClass('inactive');
 		superParent.removeClass('inactive').addClass('active');
-		var hash = $(this).data('gallery');
-		var galleryItem = $('#gallery-item');
+
 		if(galleryItem.children().length) {
-			galleryItem.children().detach();
+			galleryItem.empty();
 		}
+		/** Add the loader to show something is going on */
 		galleryItem.append(loaderDiv).show();
 
+		/** Get the gallery HTML */
 		$.ajax({
 			type: 'POST',
 			url: '/home/getGallery',
 			data: {'gallery': hash},
 			success: function (data) {
-				galleryItem.children().detach();
 				galleryItem.html(data);
 				galleryItem.animate({
 					scrollTop: galleryItem.top - 70
 				}, 700);
-				$('#gallery-item .fancybox').fancybox({
+				$('.fancybox', '#gallery-item').fancybox({
 					padding: [0, 0, 5, 0],
 					helpers	: {
 						title	: {
