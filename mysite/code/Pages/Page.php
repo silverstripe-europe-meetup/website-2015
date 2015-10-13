@@ -98,8 +98,9 @@ class Page_Controller extends \ContentController
 			PROJECT_THIRDPARTY_DIR . '/composer-bower/jquery.entwine/dist/jquery.entwine-dist.js',
 			project() . '/javascript/plugins.js',
 			project() . '/javascript/parallax.min.js',
-			project() . '/javascript/timer.js',
+			project() . '/javascript/schedule.js',
 			project() . '/javascript/gallery.js',
+			project() . '/javascript/timer.js',
 			project() . '/javascript/main.js',
 		]);
 	}
