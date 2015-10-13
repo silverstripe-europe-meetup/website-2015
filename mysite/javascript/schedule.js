@@ -1,5 +1,3 @@
-
-$(".tab_content").hide();
 if ($('ul.tabs').is(':visible')) {
 	var activeTab = $("ul.tabs li.active").data("target");
 	$('#' + activeTab).fadeIn();
