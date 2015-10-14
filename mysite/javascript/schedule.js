@@ -15,7 +15,6 @@ else {
 
 /* if in tab mode */
 $("ul.tabs li").click(function () {
-
 	var activeTab = $(this).data("target");
 	if (!$(this).hasClass('active')) {
 		$(".tab_content").hide();

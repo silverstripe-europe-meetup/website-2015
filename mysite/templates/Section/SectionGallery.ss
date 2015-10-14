@@ -4,14 +4,13 @@
             <div class="section-inner">
                 <div class="content typography">
                     <h3 class="section-title">$Title</h3>
-
+					<% if $Content %>$Content<% end_if %>
                     <div class="clear"></div>
 					<% if $Galleries.count %>
 						<div class="galleries">
 						<% loop $Galleries %>
                             <div class="gallery-featured">
-                                <h3 class="center">$Title</h3>
-
+                                <h4 class="center">$Title</h4>
                                 <div class="center $EvenOdd gallery-item">
                                     <a data-gallery="{$ID}" href="#section-gallery" Title="$Title"
                                        class="gallery-item__specific">
