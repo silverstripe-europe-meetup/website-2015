@@ -29,7 +29,7 @@
                     <div class="tab_container">
                         <h3 class="tab_drawer_heading" itemprop="name" data-target="tab1">Thursday</h3>
 
-                        <div id="tab1" class="tab_content">
+                        <div id="tab1" class="tab_content hidden">
 							<% if $Talks('Thu').count %>
 								<% loop $Talks('Thu') %>
 									<% include TalkItem %>
@@ -38,7 +38,7 @@
                         </div>
 						<h3 class="<% if $isActive('Fri') %>d_active <% end_if %>tab_drawer_heading" data-target="tab2">Friday</h3>
 
-                        <div id="tab2" class="tab_content">
+                        <div id="tab2" class="tab_content hidden">
 							<% if $Talks('Fri').count %>
 								<% loop $Talks('Fri') %>
 									<% include TalkItem %>
@@ -48,7 +48,7 @@
 
                         <h3 class="<% if $isActive('Sat') %>d_active <% end_if %>tab_drawer_heading" data-target="tab3">Saturday</h3>
 
-                        <div id="tab3" class="tab_content">
+                        <div id="tab3" class="tab_content hidden">
 							<% if $Talks('Sat').count %>
 								<% loop $Talks('Sat').GroupedBy('hour') %>
                                     <br/>

@@ -15,11 +15,12 @@
 		"unclecheese/display-logic": "*",
 		"heyday/silverstripe-colorpalette": "*",
 		"silverstripe-australia/gridfieldextensions": "*",
-		"bummzack/sortablefile": "*",
-		"axyr/silverstripe-ideannotator": "*"
+		"bummzack/sortablefile": "*"
 	},
 	"require-dev": {
+		"axyr/silverstripe-ideannotator": "*",
 		"phpunit/phpunit": "3.7.*"
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
