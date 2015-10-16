@@ -15,7 +15,6 @@
     <meta itemprop="endDate" content="2015-10-17">
     <meta itemprop="doorTime" content="09:00:00">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 </head>
 <body>
 <div class="page-container">
