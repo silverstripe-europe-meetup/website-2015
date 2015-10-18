@@ -18,7 +18,9 @@ var loaderDiv = "<div class='loader'></div>";
 			galleryItem.empty();
 		}
 		/** Add the loader to show something is going on */
-		galleryItem.append(loaderDiv).show();
+		galleryItem.append(loaderDiv).show().after(function() {
+			$(window).trigger('resize.px.parallax')
+		});
 
 		/** Get the gallery HTML */
 		$.ajax({
@@ -41,10 +43,9 @@ var loaderDiv = "<div class='loader'></div>";
 							height	: 50
 						}
 					}
+				}).after(function() {
+					$(window).trigger('resize.px.parallax')
 				});
-			},
-			done: function() {
-				$(window).trigger('resize.px.parallax')
 			}
 		});
 		_paq.push(['trackEvent', 'Gallery', $(this).attr('title'), hash]);
