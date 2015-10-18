@@ -47,7 +47,7 @@ var loaderDiv = "<div class='loader'></div>";
 				$(window).trigger('resize.px.parallax')
 			}
 		});
-		_paq.push(['trackEvent', 'Gallery', $(this).html(), hash]);
+		_paq.push(['trackEvent', 'Gallery', $(this).attr('title'), hash]);
 	});
 })(jQuery);
 
