@@ -24,6 +24,7 @@
 					<div class="clear"></div>
                     <div id="gallery-item"></div>
                 </div>
+				<div class="clear"></div>
             </div>
         </div>
     </div>
