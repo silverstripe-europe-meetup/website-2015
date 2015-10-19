@@ -8,6 +8,7 @@
  */
 
 /**
+ * @property Image owner
  * StartGeneratedWithDataObjectAnnotator
  * @property int SortOrder
  * @property int GalleryID
@@ -26,4 +27,8 @@ class ImageExtension extends DataExtension
 	);
 
 	private static $default_sort = 'SortOrder ASC';
+
+	public function largeCMSThumbnail() {
+		return $this->owner->Pad(150,150);
+	}
 }

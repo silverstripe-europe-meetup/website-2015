@@ -44,7 +44,7 @@ class Gallery extends DataObject
 		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
 		$gridFieldConfig->addComponent(new GridFieldBulkUpload());
 		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
-		$gridFieldConfig->addComponent(new GridFieldGalleryTheme('CMSThumbnail'));
+		$gridFieldConfig->addComponent(new GridFieldGalleryTheme('largeCMSThumbnail'));
 		$gridFieldConfig->removeComponentsByType('GridFieldPaginator');
 		$gridFieldConfig->removeComponentsByType('GridFieldPageCount');
 		$field = GridField::create(
