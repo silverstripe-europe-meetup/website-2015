@@ -45,6 +45,9 @@ class Gallery extends DataObject
 		$gridFieldConfig->addComponent(new GridFieldBulkUpload());
 		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
 		$gridFieldConfig->addComponent(new GridFieldGalleryTheme('CMSThumbnail'));
+		$gridFieldConfig->addComponent(new GridFieldEditableColumns());
+		$gridFieldConfig->removeComponentsByType('GridFieldPaginator');
+		$gridFieldConfig->removeComponentsByType('GridFieldPageCount');
 		$field = GridField::create(
 			'Images', 'Images', $this->Images()->sort('SortOrder'), $gridFieldConfig);
 		$fields->addFieldToTab('Root.Images', $field);
