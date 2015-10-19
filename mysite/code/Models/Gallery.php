@@ -38,6 +38,7 @@ class Gallery extends DataObject
 	public function getCMSFields()
 	{
 		$fields = parent::getCMSFields();
+		$fields->removeByName(array('SortOrder'));
 		/** @var GridFieldConfig_RecordEditor $gridFieldConfig */
 		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
 		$gridFieldConfig->addComponent(new GridFieldBulkUpload());
