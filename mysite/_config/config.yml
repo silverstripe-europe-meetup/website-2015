@@ -13,8 +13,9 @@ GDBackend:
   default_quality: 75
 SiteTree:
   nested_urls: true
-  # Disable creating of default pages (like home) on /dev/build
-  # create_default_pages: false
+DataObject:
+  extensions:
+    - 'DataObjectExtension'
 Email:
   admin_email: 'info@silverstripe-europe.org'
 SiteConfig:

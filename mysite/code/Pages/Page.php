@@ -135,4 +135,9 @@ class Page_Controller extends ContentController
 		return $this->renderWith('Gallery', $gallery);
 	}
 
+	public function onAfterWrite() {
+		parent::onAfterWrite();
+		SSViewer::flush();
+	}
+
 }
