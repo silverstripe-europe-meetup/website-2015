@@ -3,7 +3,7 @@
 /**
  * @author zauberfisch
  */
-class Page extends \SiteTree
+class Page extends SiteTree
 {
 	/**
 	 * @return \FieldList
@@ -21,7 +21,7 @@ class Page extends \SiteTree
  * @property Page dataRecord
  * @method Page data
  */
-class Page_Controller extends \ContentController
+class Page_Controller extends ContentController
 {
 	private static $allowed_actions = array(
 		'ContactForm',
@@ -135,8 +135,4 @@ class Page_Controller extends \ContentController
 		return $this->renderWith('Gallery', $gallery);
 	}
 
-	public function onAfterWrite()
-	{
-		parent::onAfterWrite();
-	}
 }

@@ -20,11 +20,12 @@
 class Gallery extends DataObject
 {
 	private static $db = array(
-		'Title' => 'Varchar(255)'
+		'Title'     => 'Varchar(255)',
+		'SortOrder' => 'Int'
 	);
 
 	private static $has_one = array(
-		'CoverImage' => 'Image',
+		'CoverImage'     => 'Image',
 		'SectionGallery' => 'SectionGallery',
 	);
 
@@ -32,21 +33,34 @@ class Gallery extends DataObject
 		'Images' => 'Image'
 	);
 
-	public function getCMSFields() {
+	private static $default_sort = 'SortOrder ASC';
+
+	public function getCMSFields()
+	{
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Images', UploadField::create('Images', 'Images', $this->Images()));
+		/** @var GridFieldConfig_RecordEditor $gridFieldConfig */
+		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
+		$gridFieldConfig->addComponent(new GridFieldBulkUpload());
+		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+		$gridFieldConfig->addComponent(new GridFieldGalleryTheme('CMSThumbnail'));
+		$field = GridField::create(
+			'Images', 'Images', $this->Images()->sort('SortOrder'), $gridFieldConfig);
+		$fields->addFieldToTab('Root.Images', $field);
 		return $fields;
 	}
 
-	public function canView($member = null) {
+	public function canView($member = null)
+	{
 		return true;
 	}
 
-	public function canEdit($member = null) {
+	public function canEdit($member = null)
+	{
 		return true;
 	}
 
-	public function canCreate($member = null) {
+	public function canCreate($member = null)
+	{
 		return true;
 	}
 

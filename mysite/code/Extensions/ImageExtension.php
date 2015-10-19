@@ -25,4 +25,5 @@ class ImageExtension extends DataExtension
 		'Gallery' => 'Gallery'
 	);
 
+	private static $default_sort = 'SortOrder ASC';
 }

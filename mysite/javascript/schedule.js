@@ -36,7 +36,7 @@ $("ul.tabs li").click(function () {
 		$('html, body').animate({
 			scrollTop: ($('#section-schedule').offset().top - 70)
 		}, 1000).after(function () {
-			$(window).trigger('resize.px.parallax')
+			$(window).trigger('resize.px.parallax');
 		});
 	}
 });
