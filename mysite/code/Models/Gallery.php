@@ -10,6 +10,7 @@
 /**
  * StartGeneratedWithDataObjectAnnotator
  * @property string Title
+ * @property int SortOrder
  * @property int CoverImageID
  * @property int SectionGalleryID
  * @method Image CoverImage
