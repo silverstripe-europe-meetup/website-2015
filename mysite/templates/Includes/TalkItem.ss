@@ -32,7 +32,7 @@
 		$Content
 		<% if $hasPresentation == 'yes' %>
 			<p>
-			<a href="<% if $Presentation %>$Presentation.Link<% else_if %>$PresentationLink<% end_if %>" target="_blank">Download/view presentation</a>
+				<a href="<% if $Presentation %>$Presentation.Link<% else %>$PresentationLink<% end_if %>" target="_blank">View presentation</a>
 			</p>
 		<% end_if %>
     </div>

@@ -81,4 +81,8 @@ class Talk extends DataObject
 	{
 		return self::$rooms[$this->Room];
 	}
+
+	public function hasPresentation() {
+		return ($this->PresentationID > 0 || $this->PresentationLink) ? 'yes':'no';
+	}
 }

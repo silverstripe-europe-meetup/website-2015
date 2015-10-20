@@ -1,6 +1,6 @@
 function fixHeights() {
 	/** Recalculate the height of the items */
-	$.each($('.talk-item:visible'), function () {
+	$.each($('.talk-item:visible').not('.has-height'), function () {
 		$(this).css('height', $(this).outerHeight() + 50);
 		$(this).addClass('has-height');
 	});
