@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b006f718c456bbb36721927c831d0d8c",
-    "content-hash": "12a156748f567280dcf69aeb0c6f5845",
+    "hash": "0cec9abffe380fba46ca72f4ce973c12",
+    "content-hash": "f6df781187d7eed678ec11224a8dd606",
     "packages": [
         {
             "name": "bummzack/sortablefile",
