@@ -11,7 +11,6 @@ class DataObjectExtension extends DataExtension
 
 	public function onAfterWrite() {
 		parent::onAfterWrite();
-		SSViewer::flush();
 	}
 
 }

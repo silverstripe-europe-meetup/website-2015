@@ -16,6 +16,7 @@
  * @method Image CoverImage
  * @method SectionGallery SectionGallery
  * @method DataList|Image[] Images
+ * @method DataList|YTVideo[] YTVideos
  * EndGeneratedWithDataObjectAnnotator
  */
 class Gallery extends DataObject
@@ -31,7 +32,8 @@ class Gallery extends DataObject
 	);
 
 	private static $has_many = array(
-		'Images' => 'Image'
+		'Images'   => 'Image',
+		'YTVideos' => 'YTVideo',
 	);
 
 	private static $default_sort = 'SortOrder ASC';
@@ -53,6 +55,14 @@ class Gallery extends DataObject
 		/** @var UploadField $uploadField */
 		$uploadField = $fields->dataFieldByName('CoverImage');
 		$uploadField->setFolderName('coverimage/');
+
+		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
+		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+		$gridFieldConfig->removeComponentsByType('GridFieldPaginator');
+		$gridFieldConfig->removeComponentsByType('GridFieldPageCount');
+		$field = GridField::create(
+			'YTVideos', 'Youtube Videos', $this->YTVideos()->sort('SortOrder'), $gridFieldConfig);
+		$fields->addFieldToTab('Root.Youtubevideos', $field);
 		return $fields;
 	}
 

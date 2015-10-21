@@ -2,8 +2,8 @@
 
 /**
  * @author zauberfisch
- * @property SiteConfig|mysiteSiteConfigExtension owner
  * StartGeneratedWithDataObjectAnnotator
+ * @property SiteConfig|mysiteSiteConfigExtension owner
  * @property string FooterContentLeft
  * @property string FooterContentRight
  * EndGeneratedWithDataObjectAnnotator

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0cec9abffe380fba46ca72f4ce973c12",
-    "content-hash": "f6df781187d7eed678ec11224a8dd606",
+    "hash": "8e53bc9c95b6ce332aa07b6d5d950e76",
+    "content-hash": "12a156748f567280dcf69aeb0c6f5845",
     "packages": [
         {
             "name": "bummzack/sortablefile",
@@ -949,12 +949,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/axyr/silverstripe-ideannotator.git",
-                "reference": "7506f167cd3feb8cd9e432c6d071bf34967b96d6"
+                "reference": "4430ac3039dd9dd0b4da1f554ad1f937975b3311"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/axyr/silverstripe-ideannotator/zipball/7506f167cd3feb8cd9e432c6d071bf34967b96d6",
-                "reference": "7506f167cd3feb8cd9e432c6d071bf34967b96d6",
+                "url": "https://api.github.com/repos/axyr/silverstripe-ideannotator/zipball/4430ac3039dd9dd0b4da1f554ad1f937975b3311",
+                "reference": "4430ac3039dd9dd0b4da1f554ad1f937975b3311",
                 "shasum": ""
             },
             "require": {
@@ -986,7 +986,7 @@
                 "orm",
                 "silverstripe"
             ],
-            "time": "2015-07-25 18:05:00"
+            "time": "2015-10-21 12:46:50"
         },
         {
             "name": "phpunit/php-code-coverage",

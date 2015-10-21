@@ -13,9 +13,6 @@ GDBackend:
   default_quality: 75
 SiteTree:
   nested_urls: true
-DataObject:
-  extensions:
-    - 'DataObjectExtension'
 Email:
   admin_email: 'info@silverstripe-europe.org'
 SiteConfig:

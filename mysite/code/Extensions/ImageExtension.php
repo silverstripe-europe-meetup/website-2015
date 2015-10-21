@@ -8,8 +8,8 @@
  */
 
 /**
- * @property Image owner
  * StartGeneratedWithDataObjectAnnotator
+ * @property Image|ImageExtension owner
  * @property int SortOrder
  * @property int GalleryID
  * @method Gallery Gallery

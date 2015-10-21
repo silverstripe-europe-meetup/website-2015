@@ -134,10 +134,4 @@ class Page_Controller extends ContentController
 		$gallery = Gallery::get()->filter(array('ID' => $galleryID))->first();
 		return $this->renderWith('Gallery', $gallery);
 	}
-
-	public function onAfterWrite() {
-		parent::onAfterWrite();
-		SSViewer::flush();
-	}
-
 }
