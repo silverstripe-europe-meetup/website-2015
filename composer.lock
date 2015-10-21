@@ -949,12 +949,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/axyr/silverstripe-ideannotator.git",
-                "reference": "4430ac3039dd9dd0b4da1f554ad1f937975b3311"
+                "reference": "ada093978147f6b1e170f91038e55427ed2d3b0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/axyr/silverstripe-ideannotator/zipball/4430ac3039dd9dd0b4da1f554ad1f937975b3311",
-                "reference": "4430ac3039dd9dd0b4da1f554ad1f937975b3311",
+                "url": "https://api.github.com/repos/axyr/silverstripe-ideannotator/zipball/ada093978147f6b1e170f91038e55427ed2d3b0f",
+                "reference": "ada093978147f6b1e170f91038e55427ed2d3b0f",
                 "shasum": ""
             },
             "require": {
@@ -986,7 +986,7 @@
                 "orm",
                 "silverstripe"
             ],
-            "time": "2015-10-21 12:46:50"
+            "time": "2015-10-21 13:48:56"
         },
         {
             "name": "phpunit/php-code-coverage",

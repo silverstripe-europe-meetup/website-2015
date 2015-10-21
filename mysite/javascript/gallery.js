@@ -4,7 +4,13 @@ var loaderDiv = "<div class='loader'></div>";
 	var featured = $('.gallery-featured', '.galleries'),
 		galleryCount = featured.length,
 		galleryItem = $('#gallery-item');
-	$('.galleries').css('width', galleryCount * 160);
+
+	if($(window).width() >= galleryCount * 160) {
+		$('.galleries').css('width', galleryCount * 160);
+	}
+	else {
+		$('.galleries').css('width', $(window).width() - 20);
+	}
 
 	$('a.gallery-item__specific').on('click', function () {
 		/** Select the items we want */

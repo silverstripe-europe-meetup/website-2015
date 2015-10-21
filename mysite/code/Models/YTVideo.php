@@ -11,6 +11,9 @@
  * StartGeneratedWithDataObjectAnnotator
  * @property string Title
  * @property string Code
+ * @property int SortOrder
+ * @property int GalleriesID
+ * @method Gallery Galleries
  * EndGeneratedWithDataObjectAnnotator
  */
 class YTVideo extends DataObject
