@@ -74,7 +74,7 @@ class YTVideo extends DataObject
 			imagepng($thumb, Director::baseFolder() . '/assets/ytimages/' . $this->Code . '.png');
 		}
 
-		return 'assets/ytimages/' . $this->Code . '.png';
+		return '/assets/ytimages/' . $this->Code . '.png';
 
 	}
 
