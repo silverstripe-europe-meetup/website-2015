@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "bummzack/sortablefile",
-            "version": "1.2",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bummzack/sortablefile.git",
-                "reference": "2d2f12f351c5e4bd87eeea5ee0f5099a90972048"
+                "reference": "36730bcdb00f71d2c79788101a96c4fe4ce5c801"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bummzack/sortablefile/zipball/2d2f12f351c5e4bd87eeea5ee0f5099a90972048",
-                "reference": "2d2f12f351c5e4bd87eeea5ee0f5099a90972048",
+                "url": "https://api.github.com/repos/bummzack/sortablefile/zipball/36730bcdb00f71d2c79788101a96c4fe4ce5c801",
+                "reference": "36730bcdb00f71d2c79788101a96c4fe4ce5c801",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,7 @@
             "type": "silverstripe-module",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -45,7 +45,7 @@
                 "silverstripe",
                 "sortable"
             ],
-            "time": "2015-08-09 09:35:19"
+            "time": "2015-10-22 12:17:23"
         },
         {
             "name": "colymba/gridfield-bulk-editing-tools",
