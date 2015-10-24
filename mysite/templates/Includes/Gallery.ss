@@ -10,6 +10,6 @@
 <% loop $YTVideos %>
     <a href="https://www.youtube.com/embed/{$Code}?autoplay=1" data-fancybox-group="$Up.Title"
        class="fancybox fancybox-media fancybox.iframe" title="$Title">
-        <img src="$squareImage"/>
+        <img src="$squareImage" title="$Title" alt="$Title" width="100" />
     </a>
 <% end_loop %>

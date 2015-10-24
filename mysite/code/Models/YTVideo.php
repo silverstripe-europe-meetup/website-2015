@@ -70,7 +70,7 @@ class YTVideo extends DataObject
 			// copying the part into thumbnail
 			$thumbSize = 120;
 			$thumb = imagecreatetruecolor($thumbSize, $thumbSize);
-			$result = imagecopyresampled($thumb, $myImage, 0, 0, $x, $y, $thumbSize, $thumbSize, $smallestSide, $smallestSide);
+			imagecopyresampled($thumb, $myImage, 0, 0, $x, $y, $thumbSize, $thumbSize, $smallestSide, $smallestSide);
 			imagepng($thumb, Director::baseFolder() . '/assets/ytimages/' . $this->Code . '.png');
 		}
 
