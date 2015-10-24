@@ -9,9 +9,13 @@
 
 /**
  * StartGeneratedWithDataObjectAnnotator
+ * @property Image|ImageExtension owner
  * @property int SortOrder
  * @property int GalleryID
  * @method Gallery Gallery
+ * @property Talk Talk
+ * @property Sponsor Sponsor
+ * @property Gallery CoverGallery
  * EndGeneratedWithDataObjectAnnotator
  */
 class ImageExtension extends DataExtension
@@ -25,4 +29,16 @@ class ImageExtension extends DataExtension
 		'Gallery' => 'Gallery'
 	);
 
+	private static $belongs_to = array(
+		'Talk'         => 'Talk',
+		'Sponsor'      => 'Sponsor',
+		'CoverGallery' => 'Gallery',
+	);
+
+	private static $default_sort = 'SortOrder ASC';
+
+	public function largeCMSThumbnail()
+	{
+		return $this->owner->Pad(150, 150);
+	}
 }

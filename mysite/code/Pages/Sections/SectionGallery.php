@@ -40,20 +40,13 @@ class SectionGallery extends SectionBase
 				'blue-dark'  => '#015790',
 			]),
 		], 'Content');
-		/** @var GridFieldConfig $gridFieldConfig */
-		$gridFieldConfig = GridFieldConfig::create()->addComponents(
-			new GridFieldToolbarHeader(),
-			new GridFieldAddNewButton('toolbar-header-right'),
-			new GridFieldSortableHeader(),
-			new GridFieldDataColumns(),
-			new GridFieldPaginator(10),
-			new GridFieldEditButton(),
-			new GridFieldDeleteAction(),
-			new GridFieldDetailForm()
-		);
 
-		$gridField = new GridField("Galleries", "Galleries", $this->Galleries(), $gridFieldConfig);
-		$fields->addFieldToTab("Root.Galleries", $gridField);
+		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
+		$gridFieldConfig->addComponent(new GridFieldOrderableRows('SortOrder'));
+		$field = GridField::create(
+			'Galeries', 'Galleries', $this->Galleries()->sort('SortOrder'), $gridFieldConfig);
+
+		$fields->addFieldToTab("Root.Galleries", $field);
 		return $fields;
 	}
 

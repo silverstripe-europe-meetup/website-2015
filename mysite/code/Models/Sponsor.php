@@ -30,4 +30,12 @@ class Sponsor extends DataObject
 		'Logo' => 'Image',
 	);
 
+	public function getCMSFields() {
+		$fields = parent::getCMSFields();
+		/** @var UploadField $uploadField */
+		$uploadField = $fields->fieldByName('Logo');
+		$uploadField->setFolderName('sponsor');
+		return $fields;
+	}
+
 }

@@ -30,6 +30,11 @@
 		<% end_if %>
         <strong itemprop="name">$Title</strong><br/>
 		$Content
+		<% if $hasPresentation == 'yes' %>
+			<p>
+				<a href="<% if $Presentation %>$Presentation.Link<% else %>$PresentationLink<% end_if %>" target="_blank">View presentation</a>
+			</p>
+		<% end_if %>
     </div>
 </div>
 <div class="clear"></div>

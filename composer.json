@@ -3,8 +3,8 @@
 	"description": "Boilerplate template to quickly kick off a new SilverStripe project",
 	"require": {
 		"php": ">=5.4",
-		"silverstripe/cms": "^3.1@stable",
-		"silverstripe/framework": "^3.1@stable",
+		"silverstripe/cms": "^3.@stable",
+		"silverstripe/framework": "^3.@stable",
 		"silverstripe/googlesitemaps": "dev-master",
 		"lrc/silverstripe-link-field": "*",
 		"zauberfisch/silverstripe-better-form-validator": "*",
@@ -15,7 +15,10 @@
 		"unclecheese/display-logic": "*",
 		"heyday/silverstripe-colorpalette": "*",
 		"silverstripe-australia/gridfieldextensions": "*",
-		"bummzack/sortablefile": "*"
+		"bummzack/sortablefile": "*",
+		"colymba/gridField-bulk-editing-tools": "*",
+		"colymba/gridfield-gallery-theme": "*",
+		"undefinedoffset/sortablegridfield": "*"
 	},
 	"require-dev": {
 		"axyr/silverstripe-ideannotator": "*",

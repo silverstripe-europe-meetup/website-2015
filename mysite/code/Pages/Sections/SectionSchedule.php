@@ -46,12 +46,7 @@ class SectionSchedule extends SectionBase
 
 	public function isActive($day)
 	{
-		if ($day === 'Fri' && date('Y-m-d') <= '2015-10-16') {
-			return 'active';
-		} elseif ($day === 'Sat' && date('Y-m-d') > '2015-10-16') {
-			return 'active';
-		}
-		return false;
+		return ($day === 'Fri') ? 'active' : false;
 	}
 
 }

@@ -1,15 +1,13 @@
 function fixHeights() {
 	/** Recalculate the height of the items */
-	$.each($('.talk-item:visible'), function () {
+	$.each($('.talk-item:visible').not('.has-height'), function () {
 		$(this).css('height', $(this).outerHeight() + 50);
 		$(this).addClass('has-height');
 	});
 };
 if ($('ul.tabs').is(':visible')) {
 	var activeTab = $("ul.tabs li.active").data("target");
-	$('#' + activeTab).fadeIn().after(function() {
-		fixHeights();
-	});
+	$('#' + activeTab).fadeIn();
 }
 else {
 	var activeDrawer = $('.d_active.tab_drawer_heading').data('target');
@@ -24,9 +22,7 @@ $("ul.tabs li").click(function () {
 	var activeTab = $(this).data("target");
 	if (!$(this).hasClass('active')) {
 		$(".tab_content").hide();
-		$("#" + activeTab).fadeIn().addClass("d_active").after(function() {
-			fixHeights();
-		});
+		$("#" + activeTab).fadeIn();
 
 		$("ul.tabs li").removeClass("active");
 		$(this).addClass("active");
@@ -36,7 +32,7 @@ $("ul.tabs li").click(function () {
 		$('html, body').animate({
 			scrollTop: ($('#section-schedule').offset().top - 70)
 		}, 1000).after(function () {
-			$(window).trigger('resize.px.parallax')
+			$(window).trigger('resize.px.parallax');
 		});
 	}
 });
