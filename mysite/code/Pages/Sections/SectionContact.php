@@ -16,32 +16,32 @@
  */
 class SectionContact extends SectionBase
 {
-	private static /** @noinspection PhpUnusedPrivateFieldInspection */
-		$db = array(
-		'BackgroundColor' => 'Varchar',
-	);
-	private static /** @noinspection PhpUnusedPrivateFieldInspection */
-		$defaults = array(
-		'BackgroundColor' => 'white',
-	);
+    private static /** @noinspection PhpUnusedPrivateFieldInspection */
+        $db = array(
+        'BackgroundColor' => 'Varchar',
+    );
+    private static /** @noinspection PhpUnusedPrivateFieldInspection */
+        $defaults = array(
+        'BackgroundColor' => 'white',
+    );
 
-	public
-	function getCMSFields()
-	{
-		$return = parent::getCMSFields();
-		$return->addFieldsToTab('Root.Main', [
-			new ColorPaletteField('BackgroundColor', $this->fieldLabel('BackgroundColor'), [
-				'grey-light' => '#F6F6F6',
-				'white'      => '#FFF',
-				'blue-dark'  => '#015790',
-			]),
-		], 'Content');
-		return $return;
-	}
+    public
+    function getCMSFields()
+    {
+        $return = parent::getCMSFields();
+        $return->addFieldsToTab('Root.Main', [
+            new ColorPaletteField('BackgroundColor', $this->fieldLabel('BackgroundColor'), [
+                'grey-light' => '#F6F6F6',
+                'white'      => '#FFF',
+                'blue-dark'  => '#015790',
+            ]),
+        ], 'Content');
+        return $return;
+    }
 
-	public function ContactForm()
-	{
-		return Controller::curr()->ContactForm();
-	}
+    public function ContactForm()
+    {
+        return Controller::curr()->ContactForm();
+    }
 }
 

@@ -7,10 +7,10 @@
  */
 class mysiteLeftAndMainExtension extends LeftAndMainExtension
 {
-	public function init()
-	{
-		parent::init();
-		CMSMenu::remove_menu_item('Help');
-	}
+    public function init()
+    {
+        parent::init();
+        CMSMenu::remove_menu_item('Help');
+    }
 
 }

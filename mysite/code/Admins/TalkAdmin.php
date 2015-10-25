@@ -8,12 +8,12 @@
  */
 class TalkAdmin extends ModelAdmin
 {
-	private static $managed_models = array(
-		'Talk'
-	);
+    private static $managed_models = array(
+        'Talk'
+    );
 
-	private static $url_segment = 'talk';
+    private static $url_segment = 'talk';
 
-	private static $menu_title = 'Talks';
+    private static $menu_title = 'Talks';
 
 }

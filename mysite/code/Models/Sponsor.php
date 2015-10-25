@@ -19,23 +19,23 @@
  */
 class Sponsor extends DataObject
 {
-	private static $db = array(
-		'Title'   => 'Varchar(255)',
-		'URL'     => 'Varchar(255)',
-		'Type'    => 'Enum("Platinum,Gold,Silver,Bronze")',
-		'Content' => 'HTMLText',
-	);
+    private static $db = array(
+        'Title'   => 'Varchar(255)',
+        'URL'     => 'Varchar(255)',
+        'Type'    => 'Enum("Platinum,Gold,Silver,Bronze")',
+        'Content' => 'HTMLText',
+    );
 
-	private static $has_one = array(
-		'Logo' => 'Image',
-	);
+    private static $has_one = array(
+        'Logo' => 'Image',
+    );
 
-	public function getCMSFields() {
-		$fields = parent::getCMSFields();
-		/** @var UploadField $uploadField */
-		$uploadField = $fields->fieldByName('Logo');
-		$uploadField->setFolderName('sponsor');
-		return $fields;
-	}
+    public function getCMSFields() {
+        $fields = parent::getCMSFields();
+        /** @var UploadField $uploadField */
+        $uploadField = $fields->fieldByName('Logo');
+        $uploadField->setFolderName('sponsor');
+        return $fields;
+    }
 
 }

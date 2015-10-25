@@ -8,12 +8,12 @@
  */
 class ContactAdmin extends ModelAdmin
 {
-	private static $managed_models = array(
-		'Contact'
-	);
+    private static $managed_models = array(
+        'Contact'
+    );
 
-	private static $url_segment = 'contact';
+    private static $url_segment = 'contact';
 
-	private static $menu_title = 'Contact';
+    private static $menu_title = 'Contact';
 
 }

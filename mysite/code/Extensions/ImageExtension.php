@@ -21,24 +21,24 @@
 class ImageExtension extends DataExtension
 {
 
-	private static $db = array(
-		'SortOrder' => 'Int',
-	);
+    private static $db = array(
+        'SortOrder' => 'Int',
+    );
 
-	private static $has_one = array(
-		'Gallery' => 'Gallery'
-	);
+    private static $has_one = array(
+        'Gallery' => 'Gallery'
+    );
 
-	private static $belongs_to = array(
-		'Talk'         => 'Talk',
-		'Sponsor'      => 'Sponsor',
-		'CoverGallery' => 'Gallery',
-	);
+    private static $belongs_to = array(
+        'Talk'         => 'Talk',
+        'Sponsor'      => 'Sponsor',
+        'CoverGallery' => 'Gallery',
+    );
 
-	private static $default_sort = 'SortOrder ASC';
+    private static $default_sort = 'SortOrder ASC';
 
-	public function largeCMSThumbnail()
-	{
-		return $this->owner->Pad(150, 150);
-	}
+    public function largeCMSThumbnail()
+    {
+        return $this->owner->Pad(150, 150);
+    }
 }
