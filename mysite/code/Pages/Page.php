@@ -52,6 +52,7 @@ class Page_Controller extends ContentController
             )
         );
         $Action = FieldList::create(
+            /** @var FormAction $btn */
             $btn = FormAction::create('HandleForm', 'Submit')
         );
         $btn->addExtraClass('button-green-full');
@@ -64,6 +65,7 @@ class Page_Controller extends ContentController
                 'Content',
             )
         );
+        /** @var Form $Form */
         $Form = Form::create($this, 'ContactForm', $FieldList, $Action, $Required);
         $Form->flashMessage = Session::get('ThanksMessage');
 
