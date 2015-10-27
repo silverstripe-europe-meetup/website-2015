@@ -7,46 +7,46 @@
  */
 class SectionHolderPage extends Page
 {
-	private static $allowed_children = [
-		'SectionBase',
-	];
+    private static $allowed_children = [
+        'SectionBase',
+    ];
 
-	public function getCMSFields()
-	{
-		$return = parent::getCMSFields();
-		$return->removeByName('Content');
-		return $return;
-	}
+    public function getCMSFields()
+    {
+        $return = parent::getCMSFields();
+        $return->removeByName('Content');
+        return $return;
+    }
 
-	protected $_cachedLayoutSections;
+    protected $_cachedLayoutSections;
 
-	/**
-	 * Get list of all Pages to be displayed as LayoutSection
-	 * @return \ArrayList|\SiteTree[]
-	 */
-	public function LayoutSections()
-	{
-		if (!$this->_cachedLayoutSections) {
-			$this->_cachedLayoutSections = new \ArrayList();
+    /**
+     * Get list of all Pages to be displayed as LayoutSection
+     * @return \ArrayList|\SiteTree[]
+     */
+    public function LayoutSections()
+    {
+        if (!$this->_cachedLayoutSections) {
+            $this->_cachedLayoutSections = new \ArrayList();
 
-			foreach ($this->AllChildren() as $child) {
-				if ($child->canView()) { // && $child->is_a('SectionBase')
-					if ($child->hasMethod('SectionHolderControllerInit')) {
-						$child->SectionHolderControllerInit();
-					}
-					$this->_cachedLayoutSections->push($child);
-				}
-			}
-		}
-		return $this->_cachedLayoutSections;
-	}
+            foreach ($this->AllChildren() as $child) {
+                if ($child->canView()) { // && $child->is_a('SectionBase')
+                    if ($child->hasMethod('SectionHolderControllerInit')) {
+                        $child->SectionHolderControllerInit();
+                    }
+                    $this->_cachedLayoutSections->push($child);
+                }
+            }
+        }
+        return $this->_cachedLayoutSections;
+    }
 
-	public function LayoutSectionsMenu()
-	{
-		return $this->LayoutSections()->filterByCallback(function ($child) {
-			return !!$child->ShowInMenus;
-		});
-	}
+    public function LayoutSectionsMenu()
+    {
+        return $this->LayoutSections()->filterByCallback(function ($child) {
+            return !!$child->ShowInMenus;
+        });
+    }
 }
 
 /**

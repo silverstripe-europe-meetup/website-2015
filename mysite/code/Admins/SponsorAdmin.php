@@ -8,12 +8,12 @@
  */
 class SponsorAdmin extends ModelAdmin
 {
-	private static $managed_models = array(
-		'Sponsor'
-	);
+    private static $managed_models = array(
+        'Sponsor'
+    );
 
-	private static $menu_title = 'Sponsors';
+    private static $menu_title = 'Sponsors';
 
-	private static $url_segment = 'sponsors';
+    private static $url_segment = 'sponsors';
 
 }

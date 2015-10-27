@@ -26,63 +26,63 @@
 class Talk extends DataObject
 {
 
-	private static $db = array(
-		'Title'            => 'Varchar(255)',
-		'Speaker'          => 'Varchar(255)',
-		'Content'          => 'HTMLText',
-		'Room'             => 'Int',
-		'Day'              => 'Enum("Thu,Fri,Sat")',
-		'Start'            => 'Time',
-		'End'              => 'Time',
-		'PresentationLink' => 'Varchar(255)',
-	);
+    private static $db = array(
+        'Title'            => 'Varchar(255)',
+        'Speaker'          => 'Varchar(255)',
+        'Content'          => 'HTMLText',
+        'Room'             => 'Int',
+        'Day'              => 'Enum("Thu,Fri,Sat")',
+        'Start'            => 'Time',
+        'End'              => 'Time',
+        'PresentationLink' => 'Varchar(255)',
+    );
 
-	private static $has_one = array(
-		'Impression'   => 'Image',
-		'Presentation' => 'File'
-	);
+    private static $has_one = array(
+        'Impression'   => 'Image',
+        'Presentation' => 'File'
+    );
 
-	private static $summary_fields = array(
-		'Title',
-		'Speaker',
-		'Day',
-		'Start',
-		'End'
-	);
+    private static $summary_fields = array(
+        'Title',
+        'Speaker',
+        'Day',
+        'Start',
+        'End'
+    );
 
-	public static $rooms = array(
-		0 => '',
-		1 => 'Design/frontend',
-		2 => 'Devops',
-		3 => 'Yesterday talks'
-	);
+    public static $rooms = array(
+        0 => '',
+        1 => 'Design/frontend',
+        2 => 'Devops',
+        3 => 'Yesterday talks'
+    );
 
-	private static $default_sort = 'Day, Start ASC';
+    private static $default_sort = 'Day, Start ASC';
 
-	public function getCMSFields()
-	{
-		/** @var FieldList $fields */
-		$fields = parent::getCMSFields();
-		$fields->removeByName(array('Room'));
-		$fields->addFieldToTab('Root.Main', DropdownField::create('Room', 'Room', self::$rooms));
-		/** @var UploadField $uploadField */
-		$uploadField = $fields->dataFieldByName('Impression');
-		$uploadField->setFolderName('talk');
-		return $fields;
-	}
+    public function getCMSFields()
+    {
+        /** @var FieldList $fields */
+        $fields = parent::getCMSFields();
+        $fields->removeByName(array('Room'));
+        $fields->addFieldToTab('Root.Main', DropdownField::create('Room', 'Room', self::$rooms));
+        /** @var UploadField $uploadField */
+        $uploadField = $fields->dataFieldByName('Impression');
+        $uploadField->setFolderName('talk');
+        return $fields;
+    }
 
 
-	public function hour()
-	{
-		return date('H', strtotime($this->Start));
-	}
+    public function hour()
+    {
+        return date('H', strtotime($this->Start));
+    }
 
-	public function roomName()
-	{
-		return self::$rooms[$this->Room];
-	}
+    public function roomName()
+    {
+        return self::$rooms[$this->Room];
+    }
 
-	public function hasPresentation() {
-		return ($this->PresentationID > 0 || $this->PresentationLink) ? 'yes':'no';
-	}
+    public function hasPresentation() {
+        return ($this->PresentationID > 0 || $this->PresentationLink) ? 'yes':'no';
+    }
 }
