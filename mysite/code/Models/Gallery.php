@@ -42,20 +42,12 @@ class Gallery extends DataObject
     {
         $fields = parent::getCMSFields();
         $fields->removeByName(array('SortOrder'));
-        /** @var GridFieldConfig_RecordEditor $gridFieldConfig */
-        $gridFieldConfig = GridFieldConfig_RecordEditor::create();
-        $gridFieldConfig->addComponent($uploader = new GridFieldBulkUpload());
-        $gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
-        $gridFieldConfig->addComponent(new GridFieldGalleryTheme('largeCMSThumbnail'));
-        $gridFieldConfig->removeComponentsByType('GridFieldPaginator');
-        $gridFieldConfig->removeComponentsByType('GridFieldPageCount');
-        $field = GridField::create(
-            'Images', 'Images', $this->Images()->sort('SortOrder'), $gridFieldConfig);
-        $fields->addFieldToTab('Root.Images', $field);
+        $fields->addFieldToTab('Root.Images', UploadField::create('Images'));
         /** @var UploadField $uploadField */
         $uploadField = $fields->dataFieldByName('CoverImage');
         $uploadField->setFolderName('coverimage/');
 
+        /** @var GridFieldConfig_RecordEditor $gridFieldConfig */
         $gridFieldConfig = GridFieldConfig_RecordEditor::create();
         $gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
         $gridFieldConfig->removeComponentsByType('GridFieldPaginator');
