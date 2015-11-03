@@ -37,8 +37,7 @@ var loaderDiv = "<div class='loader'></div>";
 			/** Get the gallery HTML */
 			$.ajax({
 				type: 'POST',
-				url: '/home/getGallery',
-				data: {'gallery': hash},
+				url: '/home/getGallery/'+hash,
 				success: function (data) {
 					galleryItem.html(data);
 					galleryItem.animate({
