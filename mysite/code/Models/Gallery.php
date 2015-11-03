@@ -41,7 +41,7 @@ class Gallery extends DataObject
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
-        $fields->removeByName(array('SortOrder'));
+        $fields->removeByName(array('SortOrder', 'YTVideos'));
         $fields->addFieldToTab('Root.Images', UploadField::create('Images'));
         /** @var UploadField $uploadField */
         $uploadField = $fields->dataFieldByName('CoverImage');
@@ -54,7 +54,6 @@ class Gallery extends DataObject
         $gridFieldConfig->removeComponentsByType('GridFieldPageCount');
         $field = GridField::create(
             'YTVideos', 'Youtube Videos', $this->YTVideos()->sort('SortOrder'), $gridFieldConfig);
-        $fields->addFieldToTab('Root.Youtubevideos', $field);
         return $fields;
     }
 

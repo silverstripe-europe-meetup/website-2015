@@ -132,7 +132,8 @@ class Page_Controller extends ContentController
 
     public function getGallery()
     {
-        $galleryID = (int)$this->getRequest()->postVar('gallery');
+        $params = $this->getURLParams();
+        $galleryID = (int)$params['ID'];
         $gallery = Gallery::get()->filter(array('ID' => $galleryID))->first();
         return $this->renderWith('Gallery', $gallery);
     }
