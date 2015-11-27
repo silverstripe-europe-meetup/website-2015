@@ -95,7 +95,7 @@
 					}
 
 					$(this).css({
-						width  : width,
+						width  : width + 100,
 						height : height,
 						top    : Math.floor(thumbHeight / 2 - height / 2),
 						left   : Math.floor(thumbWidth / 2 - width / 2)
