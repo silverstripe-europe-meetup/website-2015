@@ -35,6 +35,11 @@
 				<a href="<% if $Presentation %>$Presentation.Link<% else %>$PresentationLink<% end_if %>" target="_blank">View presentation</a>
 			</p>
 		<% end_if %>
+		<% if $VimeoLink %>
+			<p>
+				<a class="fancybox vimeo fancybox.iframe"  href="https://player.vimeo.com/video/{$VimeoLink}" title="View on Vimeo">Watch it again</a>
+			</p>
+		<% end_if %>
     </div>
 </div>
 <div class="clear"></div>
