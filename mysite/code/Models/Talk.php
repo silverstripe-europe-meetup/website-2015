@@ -17,6 +17,7 @@
  * @property string Start
  * @property string End
  * @property string PresentationLink
+ * @property string VimeoLink
  * @property int ImpressionID
  * @property int PresentationID
  * @method Image Impression
@@ -35,6 +36,7 @@ class Talk extends DataObject
         'Start'            => 'Time',
         'End'              => 'Time',
         'PresentationLink' => 'Varchar(255)',
+		'VimeoLink' => 'Varchar(255)',
     );
 
     private static $has_one = array(

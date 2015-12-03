@@ -1,5 +1,14 @@
 var _paq = _paq || [];
 (function ($) {
+
+	$('.fancybox.vimeo').fancybox({
+		padding: [0, 0, 5, 0],
+		helpers: {
+			title: {
+				type: 'inside'
+			}
+		}
+	});
 	$('a.scroll, .typography a').entwine({
 		onclick: function () {
 			var hash = this.attr('href').split("#")[1];
