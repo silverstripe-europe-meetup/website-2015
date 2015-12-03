@@ -22,6 +22,7 @@
     <div class="layout" role="main">
 		$Layout
     </div>
+	<div class="clearfix"></div>
 	<% include Footer %>
 </div>
 	<% if $isLive %>
